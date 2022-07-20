@@ -6,7 +6,8 @@
   "author": "Creative Tim",
   "license": "Creative Tim License <www.creative-tim.com/license>",
   "scripts": {
-    "dev": "parcel serve 'examples/**/!(_)*.html'"
+    "dev": "parcel serve 'examples/**/!(_)*.html'",
+    "fix": "prettier --write ."
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
