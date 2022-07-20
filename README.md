@@ -12,34 +12,33 @@ Paper Kit 2 has a PRO version with a huge number of components, sections and exa
 
 ## Table of Contents
 
-* [Versions](#versions)
-* [Demo](#demo)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Resources](#resources)
-* [Reporting Issues](#reporting-issues)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
+- [Versions](#versions)
+- [Demo](#demo)
+- [Quick Start](#quick-start)
+- [Documentation](#documentation)
+- [File Structure](#file-structure)
+- [Browser Support](#browser-support)
+- [Resources](#resources)
+- [Reporting Issues](#reporting-issues)
+- [Licensing](#licensing)
+- [Useful Links](#useful-links)
 
 ## Versions
 
 [<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-html/opt_pk2_thumbnail.jpg" width="60" height="60" />](https://www.creative-tim.com/product/paper-kit-2)
 [<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-angular/opt_pk2_angular_thumbnail.jpg" width="60" height="60" />](https://www.creative-tim.com/product/paper-kit-2-pro)
 
-| HTML | Angular |
-| --- | --- |
-| [![Paper Kit  HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-html/opt_pk2_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-2)  | [![Paper Kit  Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-angular/opt_pk2_angular_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-2-angular)  
+| HTML                                                                                                                                                                                      | Angular                                                                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Paper Kit  HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-html/opt_pk2_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-2) | [![Paper Kit  Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-angular/opt_pk2_angular_thumbnail.jpg)](https://www.creative-tim.com/product/paper-kit-2-angular) |
 
-| Register Page | Landing Page | Profile Page  |
-| --- | --- | ---  |
-| [![Register Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/register-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/register-page.html)  | [![Landing Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/landing-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/landing-page.html)  | [![Profile Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/profile-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/profile-page.html)  
+| Register Page                                                                                                                                                                                                 | Landing Page                                                                                                                                                                                               | Profile Page                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Register Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/register-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/register-page.html) | [![Landing Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/landing-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/landing-page.html) | [![Profile Page](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-pro-html/profile-page.png)](https://demos.creative-tim.com/paper-kit-2/examples/profile-page.html) |
 
 [View More](https://demos.creative-tim.com/paper-kit-2/index.html)
 
 ## Quick start
-
 
 We've also included an optional Gulp file to help you get started with theme customization. You'll need to install Node.js and Gulp before using our included gulpfile.js.
 
@@ -51,12 +50,13 @@ We've also included an optional Gulp file to help you get started with theme cus
 6.  Run in terminal `gulp open-app` for opening the Presentation Page (default) of the product.
 
 ## Documentation
-The documentation for the Paper Kit 2 is hosted at our [website](https://demos.creative-tim.com/paper-kit-2/docs/1.0/getting-started/introduction.html).
 
+The documentation for the Paper Kit 2 is hosted at our [website](https://demos.creative-tim.com/paper-kit-2/docs/1.0/getting-started/introduction.html).
 
 ## File Structure
 
 Within the download you'll find the following directories and files:
+
 ```
 paper-kit-2
 ├── CHANGELOG.md
@@ -97,8 +97,8 @@ At present, we officially aim to support the last two versions of the following 
 
 <img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
 
-
 ## Resources
+
 - Demo: <http://demos.creative-tim.com/paper-kit-2/index.html>
 - Download Page: <https://www.creative-tim.com/product/paper-kit-2>
 - Documentation: <https://demos.creative-tim.com/paper-kit-2/docs/1.0/getting-started/introduction.html>
@@ -107,12 +107,11 @@ At present, we officially aim to support the last two versions of the following 
 - Support: <https://www.creative-tim.com/contact-us>
 - Issues: [Github Issues Page](https://github.com/creativetimofficial/paper-kit-2/issues)
 
-
 **Dashboards:**
 
-| HTML | React | Vue  | Angular |
-| --- | --- | ---  | ---  |
-| [![Paper Dashboard  HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-dashboard-2-html/opt_pd2_thumbnail.jpg)](https://www.creative-tim.com/product/paper-dashboard-2) | [![Paper Dashboard  React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-dashboard-react/opt_pd_react_thumbnail.jpg)](https://www.creative-tim.com/product/paper-dashboard-pro-react) | [![Vue Paper Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-paper-dashboard/opt_pd_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-paper-dashboard)  | [![ Paper Dashboard Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-angular/opt_pk2_angular_thumbnail.jpg)](https://www.creative-tim.com/product/paper-dashboard-angular)
+| HTML                                                                                                                                                                                                        | React                                                                                                                                                                                                                    | Vue                                                                                                                                                                                                         | Angular                                                                                                                                                                                                                   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Paper Dashboard  HTML](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-dashboard-2-html/opt_pd2_thumbnail.jpg)](https://www.creative-tim.com/product/paper-dashboard-2) | [![Paper Dashboard  React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-dashboard-react/opt_pd_react_thumbnail.jpg)](https://www.creative-tim.com/product/paper-dashboard-pro-react) | [![Vue Paper Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-paper-dashboard/opt_pd_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-paper-dashboard) | [![ Paper Dashboard Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/paper-kit-2-angular/opt_pk2_angular_thumbnail.jpg)](https://www.creative-tim.com/product/paper-dashboard-angular) |
 
 ## Reporting Issues
 
@@ -126,8 +125,8 @@ We use GitHub Issues as the official bug tracker for the Paper Kit 2. Here are s
 
 - Copyright 2019 Creative Tim (https://www.creative-tim.com/?ref=pk2-github-readme)
 
-[CHANGELOG]: ./CHANGELOG.md
-[LICENSE]: ./LICENSE.md
+[changelog]: ./CHANGELOG.md
+[license]: ./LICENSE.md
 
 ## Useful Links
 
