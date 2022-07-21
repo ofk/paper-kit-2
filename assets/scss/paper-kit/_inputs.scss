@@ -1,4 +1,4 @@
-@include placeholder() {
+::placeholder {
   color: $dark-gray;
 }
 
@@ -7,6 +7,8 @@
 }
 
 .form-control {
+  height: $height-base;
+  padding: $padding-base-vertical $padding-label-horizontal;
   padding-right: 0 !important;
   font-size: $font-size-base;
   color: $font-color;
@@ -15,11 +17,6 @@
   border-radius: $border-radius-base;
   box-shadow: none;
   transition: background-color 0.3s ease 0s;
-  @include input-size(
-    $padding-base-vertical,
-    $padding-label-horizontal,
-    $height-base
-  );
 
   &:focus {
     background-color: $white-bg;
