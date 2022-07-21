@@ -6,7 +6,7 @@
   "author": "Creative Tim",
   "homepage": "http://creative-tim.com/product/paper-kit",
   "scripts": {
-    "dev": "parcel serve 'examples/**/!(_)*.html'",
+    "dev": "parcel serve 'examples/**/!(_)*.{html,pug}'",
     "fix": "run-s -c fix:*",
     "fix:prettier": "prettier --write .",
     "fix:prettier-package-json": "prettier-package-json --write",
@@ -28,6 +28,7 @@
     "parcel-bundler": "^1.12.5",
     "prettier": "^2.7.1",
     "prettier-package-json": "^2.6.4",
+    "pug": "^3.0.2",
     "sass": "^1.53.0",
     "stylelint": "^14.9.1",
     "stylelint-scss": "^4.3.0"
