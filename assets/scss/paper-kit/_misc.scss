@@ -116,23 +116,23 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .bg-primary {
-  @include navbar-color($bg-primary !important);
+  background-color: $bg-primary !important;
 }
 
 .bg-info {
-  @include navbar-color($bg-info !important);
+  background-color: $bg-info !important;
 }
 
 .bg-success {
-  @include navbar-color($bg-success !important);
+  background-color: $bg-success !important;
 }
 
 .bg-warning {
-  @include navbar-color($bg-warning !important);
+  background-color: $bg-warning !important;
 }
 
 .bg-danger {
-  @include navbar-color($bg-danger !important);
+  background-color: $bg-danger !important;
 }
 
 .wrapper {
