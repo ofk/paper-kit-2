@@ -21,15 +21,10 @@
   text-align: left;
   vertical-align: middle;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   border: 0;
   border-radius: 30px;
   outline: none;
-  -webkit-transition: border-color ease-in-out 0.15s,
-    box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   direction: ltr;
 }
@@ -40,15 +35,12 @@
   width: 100px !important;
   height: 26px;
   border-radius: 4px;
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
 .bootstrap-switch .bootstrap-switch-handle-on,
 .bootstrap-switch .bootstrap-switch-handle-off,
 .bootstrap-switch .bootstrap-switch-label {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   display: inline-block !important;
   height: 100%;
@@ -58,7 +50,6 @@
   color: #fff;
   text-indent: -5px;
   cursor: pointer;
-  -webkit-transition: 0.25s ease-out;
   transition: 0.25s ease-out;
 
   i {
@@ -142,7 +133,6 @@
   top: 0;
   left: 0;
   z-index: -1;
-  filter: alpha(opacity=0);
   opacity: 0;
 }
 
@@ -191,12 +181,10 @@
 .bootstrap-switch.bootstrap-switch-readonly .bootstrap-switch-label,
 .bootstrap-switch.bootstrap-switch-indeterminate .bootstrap-switch-label {
   cursor: default !important;
-  filter: alpha(opacity=50);
   opacity: 0.5;
 }
 
 .bootstrap-switch.bootstrap-switch-animate .bootstrap-switch-container {
-  -webkit-transition: margin-left 0.5s;
   transition: margin-left 0.5s;
 }
 

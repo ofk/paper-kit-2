@@ -6,38 +6,34 @@
   }
 
   .dropdown-menu {
-    @include opacity(0);
-    @include box-shadow($dropdown-shadow);
-
     position: absolute;
     visibility: hidden;
+    box-shadow: $dropdown-shadow;
+    opacity: 0;
 
     &[x-placement="top-start"] {
-      @include transform-translate-y-dropdown(0);
+      transform: translate3d(0, 0, 0) !important;
     }
 
     &[x-placement="bottom-start"] {
-      @include transform-translate-y-dropdown(0);
+      transform: translate3d(0, 0, 0) !important;
     }
   }
 
   &.show .dropdown-menu {
-    @include opacity(1);
-
     visibility: visible;
+    opacity: 1;
 
     &[x-placement="top-start"] {
-      @include transform-translate-y-dropdown(-50px);
-
       top: auto !important;
       bottom: 0 !important;
+      transform: translate3d(0, -50px, 0) !important;
     }
 
     &[x-placement="bottom-start"] {
-      @include transform-translate-y-dropdown(40px);
-
       top: 0 !important;
       bottom: auto !important;
+      transform: translate3d(0, 40px, 0) !important;
     }
   }
 }

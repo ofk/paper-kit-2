@@ -13,7 +13,6 @@
   background: $white-color;
   border: $none;
   box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 15%);
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 
   .navbar-brand {
@@ -222,13 +221,13 @@
 [class*="bg"] {
   .navbar-brand {
     color: $white-color;
-    @include opacity(0.9);
+    opacity: 0.9;
 
     &:focus,
     &:hover {
       color: $white-color;
       background-color: transparent;
-      @include opacity(1);
+      opacity: 1;
     }
   }
 
@@ -244,7 +243,7 @@
     .nav-item .nav-link:focus {
       color: $white-color;
       background-color: transparent;
-      @include opacity(1);
+      opacity: 1;
     }
 
     .nav .nav-item a.btn:hover {
@@ -263,14 +262,14 @@
     .open .nav-link:focus {
       color: $default-color;
       background-color: transparent;
-      @include opacity(1);
+      opacity: 1;
     }
   }
 
   .btn-default.btn-fill {
     color: $dark-gray;
     background-color: $white-color;
-    @include opacity(0.9);
+    opacity: 0.9;
   }
 
   .btn-default.btn-fill:hover,
@@ -279,7 +278,7 @@
   .btn-default.btn-fill.active,
   .open .dropdown-toggle.btn-fill.btn-default {
     border-color: $white-color;
-    @include opacity(1);
+    opacity: 1;
   }
 }
 

@@ -3,7 +3,7 @@
   color: $white-color;
   background-color: $btn-color;
   border-color: $btn-color;
-  @include opacity(1);
+  opacity: 1;
 
   &:hover,
   &:focus,
@@ -68,7 +68,7 @@
 @mixin btn-outline-styles($btn-color, $btn-states-color) {
   color: $btn-color;
   border-color: $btn-color;
-  @include opacity(1);
+  opacity: 1;
 
   &:hover,
   &:focus,

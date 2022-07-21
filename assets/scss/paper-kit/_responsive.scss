@@ -50,7 +50,7 @@
     position: relative;
     left: 0;
     width: 100%;
-    @include transition(0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+    transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
 
   .navbar .navbar-nav .dropdown-menu {
@@ -86,7 +86,8 @@
 
   .bar1 {
     top: 0;
-    @include bar-animation($topbar-back);
+    animation: $topbar-back 500ms 0s;
+    animation-fill-mode: forwards;
   }
 
   .bar2 {
@@ -95,12 +96,14 @@
 
   .bar3 {
     bottom: 0;
-    @include bar-animation($bottombar-back);
+    animation: $bottombar-back 500ms 0s;
+    animation-fill-mode: forwards;
   }
 
   .toggled .bar1 {
     top: 6px;
-    @include bar-animation($topbar-x);
+    animation: $topbar-x 500ms 0s;
+    animation-fill-mode: forwards;
   }
 
   .toggled .bar2 {
@@ -109,7 +112,8 @@
 
   .toggled .bar3 {
     bottom: 6px;
-    @include bar-animation($bottombar-x);
+    animation: $bottombar-x 500ms 0s;
+    animation-fill-mode: forwards;
   }
 
   @include topbar-x-rotation();
@@ -117,24 +121,6 @@
   @include bottombar-x-rotation();
   @include bottombar-back-rotation();
 
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
-  }
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -224,7 +210,7 @@
   }
 
   .navbar-fixed-top {
-    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
   .social-line .btn {
@@ -341,9 +327,9 @@
 
   .presentation-page .title-brand .type {
     font-size: 16px;
-    -webkit-transform: translateY(-28px);
-    -moz-transform: translateY(-28px);
-    -o-transform: translateY(-28px);
+    transform: translateY(-28px);
+    transform: translateY(-28px);
+    transform: translateY(-28px);
     transform: translateY(-28px);
   }
 
@@ -530,9 +516,8 @@
     background-color: #999;
     border-top: none;
     border-left: 1px solid #ccc5b9;
-
-    @include transform-translate-x(230px);
-    @include transition(0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+    transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transform: translateX(230px);
 
     ul {
       position: relative;
@@ -586,16 +571,16 @@
 
   .nav-open {
     & .navbar-collapse {
-      @include transform-translate-x(0);
+      transform: translateX(0);
     }
 
     & .wrapper {
       left: 0;
-      @include transform-translate-x(-230px);
+      transform: translateX(-230px);
     }
 
     & .navbar-translate {
-      @include transform-translate-x(-230px);
+      transform: translateX(-230px);
     }
   }
 
@@ -614,7 +599,6 @@
     width: auto;
     height: auto;
     border: 0;
-    -webkit-box-shadow: none;
     box-shadow: none;
     transition: none;
 
@@ -656,10 +640,10 @@
     align-items: center;
     justify-content: space-between !important;
     width: 100%;
+    transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+    transform: translateX(0);
     -ms-flex-pack: justify !important;
     -ms-flex-align: center;
-    @include transform-translate-x(0);
-    @include transition(0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
   }
 
   #bodyClick {
@@ -676,11 +660,10 @@
   }
 
   .wrapper {
-    //    @include transform-translate-x(0px);
-    @include transition(0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
-
     left: 0;
     background-color: white;
+    //    transform: translateX(0px);
+    transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
 
   .container-cards {
@@ -759,8 +742,8 @@
       background-color: #999;
       border-top: none;
       border-left: 1px solid #ccc5b9;
-      @include transform-translate-x(230px);
-      @include transition(0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+      transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+      transform: translateX(230px);
 
       .navbar-nav .nav-item {
         &:last-child {
@@ -771,12 +754,7 @@
       .navbar-nav {
         position: relative;
         z-index: 2;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
         flex-direction: column;
         height: 100%;
         -webkit-box-orient: vertical;
@@ -818,16 +796,15 @@
     .navbar-translate {
       position: relative;
       width: 100%;
-      @include transform-translate-x(0);
-      @include transition(0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
+      transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
+      transform: translateX(0);
     }
 
     .wrapper {
-      //    @include transform-translate-x(0px);
-      @include transition(0.33s, cubic-bezier(0.685, 0.0473, 0.346, 1));
-
       left: 0;
       background-color: white;
+      //    transform: translateX(0px);
+      transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     }
 
     .body {
@@ -847,16 +824,16 @@
 
     .nav-open & {
       .navbar-collapse.collapse {
-        @include transform-translate-x(0);
+        transform: translateX(0);
       }
 
       .wrapper {
         left: 0;
-        @include transform-translate-x(-230px);
+        transform: translateX(-230px);
       }
 
       .navbar-translate {
-        @include transform-translate-x(-230px);
+        transform: translateX(-230px);
       }
     }
 
@@ -864,7 +841,6 @@
     .dropdown .dropdown-menu {
       width: auto;
       border: 0;
-      -webkit-box-shadow: none;
       box-shadow: none;
       transition: none;
 
@@ -1027,7 +1003,7 @@
           margin-top: 50px;
           margin-right: -120px;
           margin-left: -15px;
-          @include transform-translate-x(-80px);
+          transform: translateX(-80px);
         }
 
         &:nth-of-type(2) {

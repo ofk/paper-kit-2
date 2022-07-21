@@ -13,20 +13,19 @@
   background-color: $white-bg;
   border: 1px solid $medium-gray;
   border-radius: $border-radius-base;
+  box-shadow: none;
   transition: background-color 0.3s ease 0s;
   @include input-size(
     $padding-base-vertical,
     $padding-label-horizontal,
     $height-base
   );
-  @include box-shadow(none);
 
   &:focus {
     background-color: $white-bg;
     border: 1px solid $table-line-color;
-    @include box-shadow(none);
-
     outline: 0 !important;
+    box-shadow: none;
 
     + .input-group-prepend,
     + .input-group-append {
@@ -54,7 +53,7 @@
   .has-error &,
   .has-success &:focus,
   .has-error &:focus {
-    @include box-shadow(none);
+    box-shadow: none;
   }
 
   .has-success & {
