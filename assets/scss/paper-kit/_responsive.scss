@@ -412,14 +412,6 @@
       padding-top: 0 !important;
       margin-top: 10px !important;
     }
-
-    .section-icons {
-      .icons-nucleo {
-        .nc-icon:not(.ninth-left-icon):not(.seventh-left-icon):not(.third-left-icon) {
-          display: none !important;
-        }
-      }
-    }
   }
 
   .bootstrap-datetimepicker-widget {
@@ -446,11 +438,6 @@
         font-size: 16px;
       }
     }
-  }
-
-  .demo-icons ul li {
-    float: left;
-    width: 20%;
   }
 
   .info.info-separator::after {
@@ -1028,13 +1015,6 @@
   }
 }
 
-@media only screen and (min-width: 1024px) {
-  .demo-icons ul li {
-    float: left;
-    width: 12.5%;
-    padding: 32px 0;
-  }
-}
 @media (max-width: 1200px) {
   .presentation-page {
     .presentation-title {
