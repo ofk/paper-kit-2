@@ -1,14 +1,14 @@
 #bodyClick {
-  height: 100%;
-  width: 100%;
   position: fixed;
-  opacity: 0;
   top: 0;
-  left: auto;
   right: 230px;
-  content: "";
+  left: auto;
   z-index: 1029;
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
+  content: "";
+  opacity: 0;
 }
 
 body {
@@ -17,19 +17,19 @@ body {
 
 body > .navbar-collapse {
   position: fixed;
-  display: block;
   top: 0;
-  height: 100vh;
-  width: 300px;
   right: 0;
   z-index: 1032;
+  display: block;
+  width: 300px;
+  height: 100vh;
+  padding-top: 15px;
+  overflow-y: visible;
+  text-align: left;
   visibility: visible;
   background-color: $white-color;
-  overflow-y: visible;
   border-top: none;
-  text-align: left;
   border-left: 1px solid $table-line-color;
-  padding-top: 15px;
 
   @include transform-translate-x(300px);
   @include transition(0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
@@ -37,8 +37,8 @@ body > .navbar-collapse {
   ul {
     position: relative;
     z-index: 3;
-    overflow-y: auto;
     height: 100%;
+    overflow-y: auto;
   }
 
   .nav > li {
@@ -47,13 +47,13 @@ body > .navbar-collapse {
     }
 
     & > a {
+      padding: 15px;
       margin: 0;
+      font-size: $font-size-small;
+      font-weight: 600;
+      line-height: $line-height-general;
       color: $default-color;
       text-transform: uppercase;
-      font-weight: 600;
-      font-size: $font-size-small;
-      line-height: $line-height-general;
-      padding: 15px;
 
       &:hover,
       &.active {
@@ -67,12 +67,12 @@ body > .navbar-collapse {
     }
 
     &.social-links {
-      text-align: center;
       margin-left: -40px;
+      text-align: center;
 
       > a {
-        font-size: 20px;
         padding: 15px;
+        font-size: 20px;
       }
     }
   }
@@ -82,11 +82,14 @@ body > .navbar-collapse {
   }
 
   &::after {
+    position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    z-index: 1;
+    display: block;
     width: 100%;
-    position: absolute;
+    height: 100%;
+    content: "";
     background-color: $bg-nude;
     background-image: linear-gradient(
       to bottom,
@@ -94,9 +97,6 @@ body > .navbar-collapse {
       rgba(112, 112, 112, 0%) 60%,
       rgba(186, 186, 186, 15%) 100%
     );
-    display: block;
-    content: "";
-    z-index: 1;
   }
 
   &.navbar-white-collapse {
@@ -115,20 +115,20 @@ body > .navbar-collapse {
 
   .open .dropdown-menu {
     position: static;
+    display: block;
     float: none;
     width: auto;
+    min-width: auto !important;
     margin-top: 0;
     background-color: transparent;
     border: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    display: block;
-    min-width: auto !important;
   }
 
   .caret {
-    border-bottom-color: $default-states-color;
     border-top-color: $default-states-color;
+    border-bottom-color: $default-states-color;
   }
 
   .nav .open > a,
@@ -148,10 +148,10 @@ body > .navbar-collapse.collapse {
 .wrapper {
   @include transition(0.5s, cubic-bezier(0.685, 0.0473, 0.346, 1));
 
-  left: 0;
-  background-color: white;
   position: relative;
+  left: 0;
   z-index: 1;
+  background-color: white;
 
   &.transition {
     @include transform-translate-x(0);
@@ -160,8 +160,8 @@ body > .navbar-collapse.collapse {
 
 .navbar-burger {
   .navbar-toggle .icon-bar {
-    display: block;
     position: relative;
+    display: block;
     width: 24px;
     height: 2px;
     border-radius: 1px;
@@ -178,10 +178,10 @@ body > .navbar-collapse.collapse {
   }
 
   .navbar-header .navbar-toggle {
-    margin-top: 12px;
-    margin-bottom: 8px;
     width: 40px;
     height: 40px;
+    margin-top: 12px;
+    margin-bottom: 8px;
   }
 
   .bar1,

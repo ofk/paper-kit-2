@@ -1,8 +1,8 @@
 // Mixin for generating new styles
 @mixin btn-styles($btn-color, $btn-states-color) {
+  color: $white-color;
   background-color: $btn-color;
   border-color: $btn-color;
-  color: $white-color;
   @include opacity(1);
 
   &:hover,
@@ -17,8 +17,8 @@
   &:not(:disabled):not(.disabled).active,
   &:not(:disabled):not(.disabled).active:focus,
   .show > &.dropdown-toggle {
-    background-color: $btn-states-color;
     color: $white-color;
+    background-color: $btn-states-color;
     border-color: $btn-states-color;
     box-shadow: none;
   }
@@ -51,8 +51,8 @@
     &.active,
     &:focus:active,
     .open > &.dropdown-toggle {
-      background-color: $transparent-bg !important;
       color: $btn-states-color !important;
+      background-color: $transparent-bg !important;
     }
 
     .caret {
@@ -66,8 +66,8 @@
 }
 
 @mixin btn-outline-styles($btn-color, $btn-states-color) {
-  border-color: $btn-color;
   color: $btn-color;
+  border-color: $btn-color;
   @include opacity(1);
 
   &:hover,
@@ -78,8 +78,8 @@
   &:active:hover,
   &.active:focus,
   .show > &.dropdown-toggle {
-    background-color: $btn-color !important;
     color: $fill-font-color;
+    background-color: $btn-color !important;
     border-color: $btn-color !important;
 
     .caret {
@@ -113,8 +113,8 @@
   $font-size,
   $line-height
 ) {
-  font-size: $font-size;
   padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
 
   &.btn-simple {
     padding: $padding-vertical + 2 $padding-horizontal;

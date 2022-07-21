@@ -1,14 +1,14 @@
 /*           Labels & Progress-bar              */
 .label {
-  padding: 0.2em 0.6em;
-  border-radius: 10px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 0.75em;
-  text-transform: uppercase;
   display: inline-block;
+  padding: 0.2em 0.6em;
   margin-bottom: 3px;
+  font-size: 0.75em;
+  font-weight: 500;
   line-height: 17px;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 10px;
 }
 
 .label-primary {

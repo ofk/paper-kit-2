@@ -1,12 +1,12 @@
 .card {
-  border-radius: $border-radius-extreme;
-  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 15%);
-  background-color: #fff;
-  color: $card-black-color;
-  margin-bottom: 20px;
   position: relative;
   z-index: 1;
+  margin-bottom: 20px;
+  color: $card-black-color;
+  background-color: #fff;
   border: 0 none;
+  border-radius: $border-radius-extreme;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 15%);
   -webkit-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1),
     box-shadow 200ms ease;
   -moz-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1),
@@ -20,10 +20,10 @@
 
   &:not(.card-plain):hover {
     box-shadow: 0 12px 19px -7px rgba(0, 0, 0, 30%);
-    transform: translateY(-10px);
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
     -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 
   &.no-transition:hover,
@@ -31,10 +31,10 @@
   &.card-refine:hover,
   &.card-register:hover {
     box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 15%);
-    transform: none;
     -webkit-transform: none;
     -ms-transform: none;
     -moz-transform: none;
+    transform: none;
   }
 
   a:not(.btn) {
@@ -47,9 +47,9 @@
   }
 
   .card-description {
-    color: $dark-gray;
-    margin-bottom: 5px;
     margin-top: 15px;
+    margin-bottom: 5px;
+    color: $dark-gray;
   }
 
   img {
@@ -72,12 +72,12 @@
 
   &.card-plain {
     background-color: transparent;
-    box-shadow: none;
     border-radius: 0;
+    box-shadow: none;
 
     .card-body {
-      padding-left: 5px;
       padding-right: 5px;
+      padding-left: 5px;
     }
 
     img {
@@ -112,8 +112,8 @@
   &.card:not(.card-plain) {
     .card-image {
       .img {
-        border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
       }
     }
   }
@@ -132,17 +132,17 @@
     .avatar {
       width: 30px;
       height: 30px;
+      margin-right: 5px;
       overflow: hidden;
       border-radius: 50%;
-      margin-right: 5px;
     }
 
     .avatar-big {
+      position: relative;
       width: 100px;
       height: 100px;
-      border-radius: 50% !important;
-      position: relative;
       margin-bottom: 15px;
+      border-radius: 50% !important;
 
       &.border-white {
         border: 4px solid $white-color;
@@ -161,17 +161,17 @@
   .stats {
     display: inline-block;
     float: right;
-    color: $dark-gray;
-    font-size: $font-size-small;
     margin-top: 6px;
+    font-size: $font-size-small;
+    color: $dark-gray;
 
     i {
-      font-size: 16px;
       position: relative;
-      text-align: center;
       top: 1px;
-      margin-left: 5px;
       margin-top: -1px;
+      margin-left: 5px;
+      font-size: 16px;
+      text-align: center;
       opacity: 0.6;
     }
   }
@@ -181,11 +181,11 @@
   }
 
   .category-social .fa {
-    font-size: 24px;
     position: relative;
-    margin-top: -4px;
     top: 2px;
+    margin-top: -4px;
     margin-right: 5px;
+    font-size: 24px;
   }
 
   .card-title-uppercase {
@@ -194,8 +194,8 @@
 
   .header {
     position: relative;
-    border-radius: $border-radius-small-top;
     z-index: 3;
+    border-radius: $border-radius-small-top;
 
     &.header-with-icon {
       height: 150px;
@@ -221,30 +221,30 @@
   }
 
   .more {
-    float: right;
+    position: relative;
     z-index: 4;
     display: block;
+    float: right;
     padding-top: 10px;
     padding-right: 10px;
-    position: relative;
   }
 
   .filter,
   .header .actions {
     position: absolute;
-    z-index: 2;
-    background-color: rgba(0, 0, 0, 76%);
     top: 0;
     left: 0;
+    z-index: 2;
     width: 100%;
     height: 100%;
     text-align: center;
+    background-color: rgba(0, 0, 0, 76%);
     opacity: 0;
   }
 
   .header .actions {
-    background-color: transparent;
     z-index: 3;
+    background-color: transparent;
 
     .btn {
       @include vertical-align();
@@ -270,8 +270,8 @@
   }
 
   > .card-title {
-    margin: 0;
     padding: 30px 0 0;
+    margin: 0;
   }
 
   .card-body {
@@ -287,14 +287,14 @@
   }
 
   .card-text {
+    padding-bottom: 15px;
     font-size: $font-paragraph;
     color: $font-color;
-    padding-bottom: 15px;
   }
 
   h6 {
-    font-size: $font-size-small;
     margin: 0;
+    font-size: $font-size-small;
   }
 
   .card-footer {
@@ -314,37 +314,37 @@
   }
 
   &.card-separator::after {
-    height: 100%;
-    right: -15px;
-    top: 0;
-    width: 1px;
-    background-color: $medium-gray;
-    content: "";
     position: absolute;
+    top: 0;
+    right: -15px;
+    width: 1px;
+    height: 100%;
+    content: "";
+    background-color: $medium-gray;
   }
 
   .card-icon {
-    display: block;
-    margin: 0 auto;
     position: relative;
-    text-align: center;
+    display: block;
     padding: 30px 0 10px;
+    margin: 0 auto;
+    text-align: center;
 
     i {
-      font-size: 40px;
       width: 105px;
+      height: 105px;
+      font-size: 40px;
+      line-height: 105px;
       border: 2px solid $card-muted-color;
       border-radius: 50%;
-      height: 105px;
-      line-height: 105px;
     }
   }
 
   .col-lg-4 & {
     .card-icon {
       i {
-        font-size: 80px;
         padding: 22px;
+        font-size: 80px;
       }
     }
   }
@@ -361,14 +361,14 @@
 
   &.card-with-border::after {
     position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
     display: block;
     width: calc(100% - 10px);
     height: calc(100% - 10px);
     content: "";
-    top: 5px;
-    left: 5px;
     border: 1px solid rgba(0, 0, 0, 15%);
-    z-index: 1;
     border-radius: 5px;
   }
 
@@ -392,34 +392,34 @@
   }
 
   &[data-background="image"] {
+    text-align: center;
     background-position: center center;
     background-size: cover;
-    text-align: center;
 
     .card-body {
       position: relative;
       z-index: 2;
+      max-width: 440px;
       min-height: 280px;
       padding-top: 40px;
       padding-bottom: 40px;
-      max-width: 440px;
       margin: 0 auto;
       text-align: center;
     }
 
     .card-title {
-      color: #fff;
       margin-top: 10px;
+      color: #fff;
     }
 
     &::after {
       position: absolute;
+      top: 0;
+      left: 0;
       z-index: 1;
+      display: block;
       width: 100%;
       height: 100%;
-      display: block;
-      left: 0;
-      top: 0;
       content: "";
       background-color: rgba(0, 0, 0, 56%);
       border-radius: $border-radius-extreme;
@@ -515,22 +515,22 @@
 }
 
 .card-big-shadow {
-  max-width: 320px;
   position: relative;
+  max-width: 320px;
 
   &::before {
-    background-image: url("http://static.tumblr.com/i21wc39/coTmrkw40/shadow.png");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    bottom: -12%;
-    content: "";
-    display: block;
-    left: -12%;
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
+    bottom: -12%;
+    left: -12%;
     z-index: 0;
+    display: block;
+    content: "";
+    background-image: url("http://static.tumblr.com/i21wc39/coTmrkw40/shadow.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 100%;
   }
 }
 
@@ -540,9 +540,9 @@
   }
 
   .card {
-    background-size: cover;
-    min-height: 430px;
     width: 100%;
+    min-height: 430px;
+    background-size: cover;
   }
 
   .img-raised {

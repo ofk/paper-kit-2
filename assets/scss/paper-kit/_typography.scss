@@ -50,9 +50,9 @@ h2,
 
 h3,
 .h3 {
+  margin: 20px 0 0;
   font-size: $font-size-h3;
   line-height: 1.4;
-  margin: 20px 0 0;
 }
 
 h4,
@@ -71,14 +71,14 @@ h6,
 .h6 {
   font-size: $font-size-h6;
   font-weight: $font-weight-bold;
-  text-transform: uppercase;
   line-height: 1.5em;
+  text-transform: uppercase;
 }
 
 p {
+  margin-bottom: 5px;
   font-size: $font-paragraph;
   line-height: $line-height-general;
-  margin-bottom: 5px;
 }
 
 h1 small,
@@ -105,8 +105,8 @@ h6 .small,
 .h4 .small,
 .h5 .small,
 .h6 .small {
-  color: $dark-gray;
   line-height: $line-height-general;
+  color: $dark-gray;
 }
 
 h1 small,
@@ -221,18 +221,18 @@ blockquote small {
 }
 
 .blockquote {
-  border-left: 0 none;
-  border-bottom: 1px solid #ccc5b9;
-  border-top: 1px solid #ccc5b9;
-  font-weight: 300;
   margin: 15px 0 10px;
+  font-weight: 300;
   text-align: center;
+  border-top: 1px solid #ccc5b9;
+  border-bottom: 1px solid #ccc5b9;
+  border-left: 0 none;
 }
 
 .title {
+  min-height: 32px;
   margin-top: 30px;
   margin-bottom: 25px;
-  min-height: 32px;
 }
 
 .title.text-center {
