@@ -1,13 +1,25 @@
 {
   "name": "paper-kit",
-  "description": "Bootstrap 4 Now UI Design",
   "version": "2.2.0",
-  "homepage": "http://creative-tim.com/product/paper-kit",
-  "author": "Creative Tim",
+  "description": "Bootstrap 4 Now UI Design",
   "license": "Creative Tim License <www.creative-tim.com/license>",
+  "author": "Creative Tim",
+  "homepage": "http://creative-tim.com/product/paper-kit",
   "scripts": {
     "dev": "parcel serve 'examples/**/!(_)*.html'",
-    "fix": "prettier --write ."
+    "fix": "run-s -c fix:*",
+    "fix:prettier": "prettier --write .",
+    "fix:prettier-package-json": "prettier-package-json --write",
+    "fix:stylelint": "npm run lint:stylelint -- --fix",
+    "lint": "run-s -c lint:*",
+    "lint:prettier": "prettier --check .",
+    "lint:prettier-package-json": "prettier-package-json -l",
+    "lint:stylelint": "stylelint --aei 'assets/**/*.{css,scss}'"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "moment": "^2.29.4",
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
     "@ofk/stylelint-config-recommend": "^4.1.0",
@@ -18,10 +30,5 @@
     "sass": "^1.53.0",
     "stylelint": "^14.9.1",
     "stylelint-scss": "^4.3.0"
-  },
-  "dependencies": {
-    "jquery": "^3.6.0",
-    "moment": "^2.29.4",
-    "popper.js": "^1.16.1"
   }
 }
