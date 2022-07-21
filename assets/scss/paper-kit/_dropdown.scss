@@ -4,31 +4,38 @@
     transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0s,
       opacity 0.3s ease 0s, height 0s linear 0.35s;
   }
+
   .dropdown-menu {
     @include opacity(0);
     @include box-shadow($dropdown-shadow);
+
     visibility: hidden;
     position: absolute;
 
     &[x-placement="top-start"] {
-      @include transform-translate-y-dropdown(0px);
+      @include transform-translate-y-dropdown(0);
     }
+
     &[x-placement="bottom-start"] {
-      @include transform-translate-y-dropdown(0px);
+      @include transform-translate-y-dropdown(0);
     }
   }
 
   &.show .dropdown-menu {
     @include opacity(1);
+
     visibility: visible;
 
     &[x-placement="top-start"] {
       @include transform-translate-y-dropdown(-50px);
+
       top: auto !important;
       bottom: 0 !important;
     }
+
     &[x-placement="bottom-start"] {
       @include transform-translate-y-dropdown(40px);
+
       bottom: auto !important;
       top: 0 !important;
     }
@@ -40,11 +47,11 @@
   border: 0 none;
   border-radius: $border-radius-extreme;
   margin-top: 10px;
-  padding: 0px;
+  padding: 0;
 
   .divider {
     background-color: $medium-pale-bg;
-    margin: 0px;
+    margin: 0;
   }
 
   .dropdown-header {
@@ -56,7 +63,7 @@
   .no-notification {
     color: #9a9a9a;
     font-size: 1.2em;
-    padding: 30px 30px;
+    padding: 30px;
     text-align: center;
   }
 
@@ -73,6 +80,7 @@
       margin-top: -3px;
     }
   }
+
   .dropdown-item:focus {
     outline: 0 !important;
   }
@@ -99,10 +107,12 @@
       &.show {
         left: 100% !important;
       }
+
       .dropdown-item.dropdown-toggle {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
+
       li .dropdown-item.dropdown-toggle {
         border-top-left-radius: 0;
         border-top-right-radius: 0;
@@ -123,6 +133,7 @@
     opacity: 1;
     text-decoration: none;
   }
+
   .dropdown-item:hover,
   .dropdown-item:focus {
     background-color: $default-color;
@@ -132,23 +143,28 @@
   &.dropdown-primary .dropdown-item:focus {
     background-color: $bg-primary;
   }
+
   &.dropdown-info .dropdown-item:hover,
   &.dropdown-info .dropdown-item:focus {
     background-color: $bg-info;
   }
+
   &.dropdown-success .dropdown-item:hover,
   &.dropdown-success .dropdown-item:focus {
     background-color: $bg-success;
   }
+
   &.dropdown-warning .dropdown-item:hover,
   &.dropdown-warning .dropdown-item:focus {
     background-color: $bg-warning;
   }
+
   &.dropdown-danger .dropdown-item:hover,
   &.dropdown-danger .dropdown-item:focus {
     background-color: $bg-danger;
   }
 }
+
 .dropdown-divider {
   margin: 0 !important;
 }
@@ -158,6 +174,7 @@
 .btn-group.select.open {
   overflow: visible;
 }
+
 .dropdown-menu-right {
   right: -2px;
   left: auto;

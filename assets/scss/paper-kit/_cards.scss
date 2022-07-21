@@ -1,13 +1,12 @@
 .card {
   border-radius: $border-radius-extreme;
-  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
-  background-color: #ffffff;
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 15%);
+  background-color: #fff;
   color: $card-black-color;
   margin-bottom: 20px;
   position: relative;
   z-index: 1;
   border: 0 none;
-
   -webkit-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1),
     box-shadow 200ms ease;
   -moz-transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1),
@@ -20,7 +19,7 @@
     box-shadow 200ms ease;
 
   &:not(.card-plain):hover {
-    box-shadow: 0px 12px 19px -7px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 19px -7px rgba(0, 0, 0, 30%);
     transform: translateY(-10px);
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
@@ -31,7 +30,7 @@
   &.page-carousel:hover,
   &.card-refine:hover,
   &.card-register:hover {
-    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 15%);
     transform: none;
     -webkit-transform: none;
     -ms-transform: none;
@@ -46,6 +45,7 @@
       color: $black-color;
     }
   }
+
   .card-description {
     color: $dark-gray;
     margin-bottom: 5px;
@@ -91,8 +91,9 @@
 
   .card-background-image ul li {
     color: #fff;
-    border-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 30%);
   }
+
   &.card-blog,
   &.card-testimonial .card-description + .card-title {
     margin-top: 30px;
@@ -107,14 +108,16 @@
       }
     }
   }
+
   &.card:not(.card-plain) {
     .card-image {
       .img {
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
       }
     }
   }
+
   &.card-blog {
     margin-top: 5px;
 
@@ -125,6 +128,7 @@
 
   .author {
     display: inline-block;
+
     .avatar {
       width: 30px;
       height: 30px;
@@ -143,6 +147,7 @@
       &.border-white {
         border: 4px solid $white-color;
       }
+
       &.border-gray {
         border: 4px solid $card-muted-color;
       }
@@ -170,9 +175,11 @@
       opacity: 0.6;
     }
   }
+
   .card-category {
     color: $dark-gray;
   }
+
   .category-social .fa {
     font-size: 24px;
     position: relative;
@@ -180,6 +187,7 @@
     top: 2px;
     margin-right: 5px;
   }
+
   .card-title-uppercase {
     text-transform: uppercase;
   }
@@ -192,6 +200,7 @@
     &.header-with-icon {
       height: 150px;
     }
+
     img {
       width: 100%;
     }
@@ -205,10 +214,12 @@
     .card-footer {
       padding: 0;
     }
+
     .card-description + .card-footer {
       padding-top: 10px;
     }
   }
+
   .more {
     float: right;
     z-index: 4;
@@ -222,13 +233,12 @@
   .header .actions {
     position: absolute;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.76);
+    background-color: rgba(0, 0, 0, 76%);
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     text-align: center;
-
     opacity: 0;
   }
 
@@ -268,8 +278,9 @@
     padding: 20px;
 
     .card-title {
-      margin: 5px 0 0 0;
+      margin: 5px 0 0;
     }
+
     .card-category ~ .card-title {
       margin-top: 5px;
     }
@@ -295,13 +306,14 @@
       .btn:first-child {
         border-radius: 0 0 0 6px;
       }
+
       .btn:last-child {
-        border-radius: 0 0 6px 0;
+        border-radius: 0 0 6px;
       }
     }
   }
 
-  &.card-separator:after {
+  &.card-separator::after {
     height: 100%;
     right: -15px;
     top: 0;
@@ -339,7 +351,7 @@
 
   &.card-with-border {
     .card-body {
-      padding: 15px 15px 25px 15px;
+      padding: 15px 15px 25px;
     }
 
     .card-footer {
@@ -347,7 +359,7 @@
     }
   }
 
-  &.card-with-border:after {
+  &.card-with-border::after {
     position: absolute;
     display: block;
     width: calc(100% - 10px);
@@ -355,7 +367,7 @@
     content: "";
     top: 5px;
     left: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(0, 0, 0, 15%);
     z-index: 1;
     border-radius: 5px;
   }
@@ -365,12 +377,15 @@
       padding: 50px 65px;
       text-align: center;
     }
+
     #dLabel {
       float: right;
+
       i {
         font-size: 20px;
       }
     }
+
     .dropdown-menu {
       margin-top: 55px;
     }
@@ -391,11 +406,13 @@
       margin: 0 auto;
       text-align: center;
     }
+
     .card-title {
       color: #fff;
       margin-top: 10px;
     }
-    &:after {
+
+    &::after {
       position: absolute;
       z-index: 1;
       width: 100%;
@@ -404,9 +421,10 @@
       left: 0;
       top: 0;
       content: "";
-      background-color: rgba(0, 0, 0, 0.56);
+      background-color: rgba(0, 0, 0, 56%);
       border-radius: $border-radius-extreme;
     }
+
     .card-category {
       color: $white-color;
     }
@@ -422,8 +440,9 @@
     .filter {
       border-radius: $border-radius-large;
     }
+
     .card-description {
-      color: rgba(255, 255, 255, 0.8);
+      color: rgba(255, 255, 255, 80%);
     }
 
     .card-title,
@@ -446,13 +465,13 @@
 
     .card-icon {
       i {
-        color: #ffffff;
-        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 30%);
       }
     }
 
-    &.card-with-border:after {
-      border: 1px solid rgba(255, 255, 255, 0.45);
+    &.card-with-border::after {
+      border: 1px solid rgba(255, 255, 255, 45%);
     }
   }
 
@@ -499,7 +518,7 @@
   max-width: 320px;
   position: relative;
 
-  &:before {
+  &::before {
     background-image: url("http://static.tumblr.com/i21wc39/coTmrkw40/shadow.png");
     background-position: center bottom;
     background-repeat: no-repeat;
@@ -514,15 +533,18 @@
     z-index: 0;
   }
 }
+
 .card-image {
   &.card-big-shadow {
     max-width: 100%;
   }
+
   .card {
     background-size: cover;
     min-height: 430px;
     width: 100%;
   }
+
   .img-raised {
     margin-top: -20px;
   }

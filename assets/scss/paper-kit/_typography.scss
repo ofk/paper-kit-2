@@ -37,30 +37,36 @@ h4,
 .h4 {
   margin: $margin-large-vertical 0 0;
 }
+
 h1,
 .h1 {
   font-size: $font-size-h1;
 }
+
 h2,
 .h2 {
   font-size: $font-size-h2;
 }
+
 h3,
 .h3 {
   font-size: $font-size-h3;
   line-height: 1.4;
-  margin: 20px 0 0px;
+  margin: 20px 0 0;
 }
+
 h4,
 .h4 {
   font-size: $font-size-h4;
   line-height: 1.2em;
 }
+
 h5,
 .h5 {
   font-size: $font-size-h5;
   line-height: 1.4em;
 }
+
 h6,
 .h6 {
   font-size: $font-size-h6;
@@ -68,6 +74,7 @@ h6,
   text-transform: uppercase;
   line-height: 1.5em;
 }
+
 p {
   font-size: $font-paragraph;
   line-height: $line-height-general;
@@ -126,38 +133,48 @@ h3 .small {
     text-decoration: none;
   }
 }
+
 .title-uppercase {
   text-transform: uppercase;
 }
+
 .description {
   color: $dark-gray;
 }
+
 blockquote small {
   font-style: normal;
 }
+
 .text-muted {
   color: $medium-gray;
 }
+
 .text-primary,
 .text-primary:hover {
   color: $primary-color !important;
 }
+
 .text-info,
 .text-info:hover {
   color: $info-color !important;
 }
+
 .text-success,
 .text-success:hover {
   color: $success-color !important;
 }
+
 .text-warning,
 .text-warning:hover {
   color: $warning-color !important;
 }
+
 .text-danger,
 .text-danger:hover {
   color: $danger-color !important;
 }
+
 .glyphicon {
   line-height: 1;
 }
@@ -172,29 +189,37 @@ blockquote small {
   0% {
     transform: scale(0.75);
   }
+
   20% {
     transform: scale(1);
   }
+
   40% {
     transform: scale(0.75);
   }
+
   60% {
     transform: scale(1);
   }
+
   80% {
     transform: scale(0.75);
   }
+
   100% {
     transform: scale(0.75);
   }
 }
+
 .footer .credits,
 .footer-nav {
   line-height: 85px;
 }
+
 .footer .btn {
   margin-bottom: 0;
 }
+
 .blockquote {
   border-left: 0 none;
   border-bottom: 1px solid #ccc5b9;
@@ -203,11 +228,13 @@ blockquote small {
   margin: 15px 0 10px;
   text-align: center;
 }
+
 .title {
   margin-top: 30px;
   margin-bottom: 25px;
   min-height: 32px;
 }
+
 .title.text-center {
   margin-bottom: 50px;
 }

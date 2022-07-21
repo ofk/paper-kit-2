@@ -132,48 +132,57 @@
 @mixin topbar-x-rotation() {
   @keyframes topbar-x {
     0% {
-      top: 0px;
+      top: 0;
       transform: rotate(0deg);
     }
+
     45% {
       top: 6px;
       transform: rotate(145deg);
     }
+
     75% {
       transform: rotate(130deg);
     }
+
     100% {
       transform: rotate(135deg);
     }
   }
   @-webkit-keyframes topbar-x {
     0% {
-      top: 0px;
+      top: 0;
       -webkit-transform: rotate(0deg);
     }
+
     45% {
       top: 6px;
       -webkit-transform: rotate(145deg);
     }
+
     75% {
       -webkit-transform: rotate(130deg);
     }
+
     100% {
       -webkit-transform: rotate(135deg);
     }
   }
   @-moz-keyframes topbar-x {
     0% {
-      top: 0px;
+      top: 0;
       -moz-transform: rotate(0deg);
     }
+
     45% {
       top: 6px;
       -moz-transform: rotate(145deg);
     }
+
     75% {
       -moz-transform: rotate(130deg);
     }
+
     100% {
       -moz-transform: rotate(135deg);
     }
@@ -186,14 +195,17 @@
       top: 6px;
       transform: rotate(135deg);
     }
+
     45% {
       transform: rotate(-10deg);
     }
+
     75% {
       transform: rotate(5deg);
     }
+
     100% {
-      top: 0px;
+      top: 0;
       transform: rotate(0);
     }
   }
@@ -203,14 +215,17 @@
       top: 6px;
       -webkit-transform: rotate(135deg);
     }
+
     45% {
       -webkit-transform: rotate(-10deg);
     }
+
     75% {
       -webkit-transform: rotate(5deg);
     }
+
     100% {
-      top: 0px;
+      top: 0;
       -webkit-transform: rotate(0);
     }
   }
@@ -220,14 +235,17 @@
       top: 6px;
       -moz-transform: rotate(135deg);
     }
+
     45% {
       -moz-transform: rotate(-10deg);
     }
+
     75% {
       -moz-transform: rotate(5deg);
     }
+
     100% {
-      top: 0px;
+      top: 0;
       -moz-transform: rotate(0);
     }
   }
@@ -236,48 +254,57 @@
 @mixin bottombar-x-rotation() {
   @keyframes bottombar-x {
     0% {
-      bottom: 0px;
+      bottom: 0;
       transform: rotate(0deg);
     }
+
     45% {
       bottom: 6px;
       transform: rotate(-145deg);
     }
+
     75% {
       transform: rotate(-130deg);
     }
+
     100% {
       transform: rotate(-135deg);
     }
   }
   @-webkit-keyframes bottombar-x {
     0% {
-      bottom: 0px;
+      bottom: 0;
       -webkit-transform: rotate(0deg);
     }
+
     45% {
       bottom: 6px;
       -webkit-transform: rotate(-145deg);
     }
+
     75% {
       -webkit-transform: rotate(-130deg);
     }
+
     100% {
       -webkit-transform: rotate(-135deg);
     }
   }
   @-moz-keyframes bottombar-x {
     0% {
-      bottom: 0px;
+      bottom: 0;
       -moz-transform: rotate(0deg);
     }
+
     45% {
       bottom: 6px;
       -moz-transform: rotate(-145deg);
     }
+
     75% {
       -moz-transform: rotate(-130deg);
     }
+
     100% {
       -moz-transform: rotate(-135deg);
     }
@@ -290,14 +317,17 @@
       bottom: 6px;
       transform: rotate(-135deg);
     }
+
     45% {
       transform: rotate(10deg);
     }
+
     75% {
       transform: rotate(-5deg);
     }
+
     100% {
-      bottom: 0px;
+      bottom: 0;
       transform: rotate(0);
     }
   }
@@ -306,14 +336,17 @@
       bottom: 6px;
       -webkit-transform: rotate(-135deg);
     }
+
     45% {
       -webkit-transform: rotate(10deg);
     }
+
     75% {
       -webkit-transform: rotate(-5deg);
     }
+
     100% {
-      bottom: 0px;
+      bottom: 0;
       -webkit-transform: rotate(0);
     }
   }
@@ -322,14 +355,17 @@
       bottom: 6px;
       -moz-transform: rotate(-135deg);
     }
+
     45% {
       -moz-transform: rotate(10deg);
     }
+
     75% {
       -moz-transform: rotate(-5deg);
     }
+
     100% {
-      bottom: 0px;
+      bottom: 0;
       -moz-transform: rotate(0);
     }
   }
@@ -348,12 +384,15 @@
 
 @mixin card-color-style($background-color, $text-color, $subtitle-color) {
   background: $background-color;
+
   .category {
     color: $subtitle-color;
   }
+
   .description {
     color: $text-color;
   }
+
   .icon {
     i {
       color: $text-color;

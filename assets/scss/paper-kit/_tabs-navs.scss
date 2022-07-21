@@ -10,6 +10,7 @@
     padding-bottom: 20px;
   }
 }
+
 .nav-tabs-wrapper {
   display: inline-block;
   margin-bottom: -6px;
@@ -18,19 +19,23 @@
   position: relative;
   width: auto;
 }
+
 .nav-tabs {
   border-bottom: 0 none;
   font-size: $font-size-medium;
   font-weight: $font-weight-bold;
+
   .nav-item {
     .nav-link {
       border: 0 none;
       color: $other-medium-gray;
       background-color: transparent;
     }
+
     .nav-link:hover {
       color: $font-color;
     }
+
     .nav-link.active {
       color: $font-color;
     }
@@ -46,10 +51,10 @@
       background-color: transparent;
       border: 0 none;
       //height: 50px;
-      &:after {
+      &::after {
         border-bottom: 11px solid $white-color;
-        border-left: 11px solid rgba(0, 0, 0, 0);
-        border-right: 11px solid rgba(0, 0, 0, 0);
+        border-left: 11px solid rgba(0, 0, 0, 0%);
+        border-right: 11px solid rgba(0, 0, 0, 0%);
         content: "";
         display: inline-block;
         position: absolute;
@@ -57,10 +62,10 @@
         bottom: 5px;
       }
 
-      &:before {
+      &::before {
         border-bottom: 11px solid $medium-pale-bg;
-        border-left: 11px solid rgba(0, 0, 0, 0);
-        border-right: 11px solid rgba(0, 0, 0, 0);
+        border-left: 11px solid rgba(0, 0, 0, 0%);
+        border-right: 11px solid rgba(0, 0, 0, 0%);
         content: "";
         display: inline-block;
         position: absolute;
@@ -69,9 +74,11 @@
       }
     }
   }
+
   .nav-item.show .nav-link {
     background-color: transparent;
   }
+
   .dropdown-menu {
     margin-top: -6px;
     margin-left: -46px;
@@ -79,23 +86,25 @@
 
     .dropdown-item:hover,
     .dropdown-item.active {
-      color: #ffffff;
+      color: #fff;
       background-color: #68b3c8;
     }
-    :before {
+
+    ::before {
       border-bottom: 11px solid $medium-pale-bg;
-      border-left: 11px solid rgba(0, 0, 0, 0);
-      border-right: 11px solid rgba(0, 0, 0, 0);
+      border-left: 11px solid rgba(0, 0, 0, 0%);
+      border-right: 11px solid rgba(0, 0, 0, 0%);
       content: "";
       display: inline-block;
       position: absolute;
       right: 12px;
       top: -11px;
     }
-    :after {
+
+    ::after {
       border-bottom: 11px solid $pale-bg;
-      border-left: 11px solid rgba(0, 0, 0, 0);
-      border-right: 11px solid rgba(0, 0, 0, 0);
+      border-left: 11px solid rgba(0, 0, 0, 0%);
+      border-right: 11px solid rgba(0, 0, 0, 0%);
       content: "";
       display: inline-block;
       position: absolute;
@@ -104,11 +113,13 @@
     }
   }
 }
+
 .profile-content {
   & .tab-content {
     & .tab-pane {
       min-height: 200px;
     }
+
     & #tweets,
     #connections,
     #media {
@@ -116,12 +127,14 @@
     }
   }
 }
+
 /*             Navigation Pills               */
 
 .nav-pills {
   .nav-item + .nav-link {
     margin-left: 0;
   }
+
   .nav-item .nav-link {
     border: 1px solid $default-color;
     border-radius: 0;
@@ -130,29 +143,35 @@
     margin-left: -1px;
     padding: 10px 25px;
   }
+
   .nav-item.active .nav-link,
   .nav-item.active .nav-link:hover,
   .nav-item.active .nav-link:focus {
     background-color: $default-color;
-    color: #ffffff;
+    color: #fff;
   }
+
   .nav-item:first-child .nav-link {
     border-radius: 30px 0 0 30px !important;
     margin: 0;
   }
+
   .nav-item:last-child .nav-link {
     border-radius: 0 30px 30px 0 !important;
   }
+
   .nav-item .nav-link.active {
     background-color: $default-color;
     color: $white-color;
   }
 }
+
 .nav-pills-primary {
   .nav-item {
     .nav-link {
       border: 1px solid $primary-color !important;
       color: $primary-color !important;
+
       &.active {
         border: 1px solid $primary-color !important;
         color: $white-color !important;
@@ -160,11 +179,13 @@
     }
   }
 }
+
 .nav-pills-danger {
   .nav-item {
     .nav-link {
       border: 1px solid $danger-color !important;
       color: $danger-color !important;
+
       &.active {
         border: 1px solid $danger-color !important;
         color: $white-color !important;
@@ -172,11 +193,13 @@
     }
   }
 }
+
 .nav-pills-info {
   .nav-item {
     .nav-link {
       border: 1px solid $info-color !important;
       color: $info-color !important;
+
       &.active {
         border: 1px solid $info-color !important;
         color: $white-color !important;
@@ -184,11 +207,13 @@
     }
   }
 }
+
 .nav-pills-success {
   .nav-item {
     .nav-link {
       border: 1px solid $success-color !important;
       color: $success-color !important;
+
       &.active {
         border: 1px solid $success-color !important;
         color: $white-color !important;
@@ -196,11 +221,13 @@
     }
   }
 }
+
 .nav-pills-warning {
   .nav-item {
     .nav-link {
       border: 1px solid $warning-color !important;
       color: $warning-color !important;
+
       &.active {
         border: 1px solid $warning-color !important;
         color: $white-color !important;
