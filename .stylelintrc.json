@@ -1,0 +1,54 @@
+{
+  "plugins": ["stylelint-scss"],
+  "extends": "@ofk/stylelint-config-recommend",
+  "rules": {
+    "font-family-no-missing-generic-family-keyword": [
+      true,
+      {
+        "ignoreFontFamilies": ["nucleo-icons", "FontAwesome"]
+      }
+    ],
+    "function-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": [
+          "darken",
+          "lighten",
+          "DXImageTransform.Microsoft.BasicImage",
+          "alpha",
+          "color-stop",
+          "-webkit-gradient"
+        ]
+      }
+    ],
+    "declaration-block-no-duplicate-properties": null,
+    "declaration-block-no-shorthand-property-overrides": null,
+    "block-no-empty": null,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
+    "alpha-value-notation": null,
+    "color-hex-length": null,
+    "length-zero-no-unit": null,
+    "font-family-name-quotes": null,
+    "keyframes-name-pattern": null,
+    "number-max-precision": null,
+    "shorthand-property-no-redundant-values": null,
+    "value-no-vendor-prefix": null,
+    "property-no-vendor-prefix": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "selector-class-pattern": null,
+    "selector-id-pattern": null,
+    "selector-no-vendor-prefix": null,
+    "selector-pseudo-element-colon-notation": null,
+    "at-rule-no-vendor-prefix": null,
+    "value-keyword-case": null,
+    "function-name-case": null,
+    "rule-empty-line-before": null,
+    "comment-empty-line-before": null,
+    "comment-whitespace-inside": null,
+    "declaration-empty-line-before": null,
+    "scss/comment-no-empty": null,
+    "scss/no-global-function-names": null,
+    "order/properties-order": null
+  }
+}
