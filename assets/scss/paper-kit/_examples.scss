@@ -1,6 +1,7 @@
 .landing-alert {
   margin-bottom: 0;
 }
+
 .page-header {
   background-color: #b2afab;
   background-position: center center;
@@ -16,7 +17,7 @@
   justify-content: center;
 
   .filter::after {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 50%);
     content: "";
     display: block;
     height: 100%;
@@ -26,10 +27,12 @@
     width: 100%;
     z-index: 1;
   }
+
   &.page-header-small {
     min-height: 65vh !important;
     max-height: 700px;
   }
+
   &.page-header-xs {
     min-height: 40vh !important;
   }
@@ -41,25 +44,31 @@
     }
   }
 }
+
 .page-header .motto {
   text-align: left;
   z-index: 3;
   color: #fff;
   position: relative;
 }
+
 .landing-section {
   padding: 100px 0;
   z-index: 1;
 }
+
 .section-buttons {
   z-index: 1;
 }
+
 .landing-section .btn-simple {
   padding: 0;
 }
+
 .landing-section .column {
   padding: 0 75px 0 25px;
 }
+
 .team-player .img-circle,
 .team-player .img-thumbnail {
   display: block;
@@ -68,12 +77,15 @@
   margin-right: auto;
   width: 120px;
 }
+
 .contact-form {
   margin-top: 30px;
 }
+
 .contact-form label {
   margin-top: 15px;
 }
+
 .contact-form .btn {
   margin-top: 30px;
 }
@@ -82,14 +94,17 @@
   position: relative;
   z-index: 2;
 }
+
 #register-navbar a {
   color: #fff;
 }
+
 .register-background .container {
   margin-top: 11%;
   position: relative;
   z-index: 3;
 }
+
 .register-footer {
   bottom: 20px;
   position: absolute;
@@ -98,6 +113,7 @@
   background: transparent;
   color: $white-color;
 }
+
 .register-footer .fa-heart {
   color: #eb5e28;
 }
@@ -105,13 +121,16 @@
 .register-card label {
   margin-top: 15px;
 }
+
 .register-card .title {
   color: #b33c12;
   text-align: center;
 }
+
 .register-card .btn {
   margin-top: 30px;
 }
+
 .register-card .forgot {
   text-align: center;
 }
@@ -119,44 +138,53 @@
 .profile-content {
   position: relative;
 }
+
 .owner {
   text-align: center;
 }
+
 .owner .avatar {
   padding: 15px;
   max-width: 180px;
   margin: -85px auto 0;
   display: inline-block;
 }
+
 .owner .name h4 {
   margin-top: 10px;
 }
+
 .profile-tabs {
   margin: 50px 0;
   min-height: 300px;
 }
+
 #following h3 {
-  margin: 20px 0 40px 0;
+  margin: 20px 0 40px;
 }
 
 #follows .follows .unfollow .checkbox {
   margin-top: -15px;
 }
+
 #follows .follows h6 {
   margin-top: 15px;
 }
+
 .follows hr {
   margin-top: 10px;
 }
+
 .alert h5 {
   // margin-bottom: 10px;
 }
+
 .title-brand {
   max-width: 730px;
   margin: 0 auto;
   position: relative;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   display: block;
 
   .type {
@@ -176,19 +204,19 @@
   font-size: 8em;
   font-weight: 700;
   margin: 0;
-  color: #ffffff;
+  color: #fff;
   background: #fbf8ec;
-  background: -moz-linear-gradient(top, #ffffff 35%, #4e6773 100%);
-  background: -webkit-linear-gradient(top, #ffffff 35%, #4e6773 100%);
-  background: -ms-linear-gradient(top, #ffffff 35%, #4e6773 100%);
-  background: linear-gradient(to bottom, #ffffff 35%, #4e6773 100%);
-
+  background: -moz-linear-gradient(top, #fff 35%, #4e6773 100%);
+  background: -webkit-linear-gradient(top, #fff 35%, #4e6773 100%);
+  background: -ms-linear-gradient(top, #fff 35%, #4e6773 100%);
+  background: linear-gradient(to bottom, #fff 35%, #4e6773 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .presentation-subtitle {
   font-size: 1.7em;
-  color: #ffffff;
+  color: #fff;
 }
 
 .category-absolute {
@@ -198,7 +226,7 @@
   margin-top: -60px;
   padding: 0 15px;
   width: 100%;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 50%);
 
   .creative-tim-logo {
     max-width: 140px;
@@ -226,11 +254,13 @@
     opacity: 1;
   }
 }
+
 .page-header {
   .content-center {
     margin-top: 85px;
   }
 }
+
 .moving-clouds {
   position: absolute;
   z-index: 1;
@@ -247,11 +277,13 @@
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
+
   100% {
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
   }
 }
+
 .following {
   img {
     max-width: 70px;
@@ -263,6 +295,7 @@
     & .tab-pane {
       min-height: 200px;
     }
+
     & #tweets,
     #connections,
     #media {

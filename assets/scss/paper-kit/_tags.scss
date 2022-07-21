@@ -81,6 +81,7 @@
     &:hover {
       padding-right: 25px;
     }
+
     &:hover [data-role="remove"] {
       opacity: 1;
       padding-right: 6px;
@@ -93,21 +94,23 @@
       right: 0;
       opacity: 0;
 
-      &:after {
+      &::after {
         content: "\f00d";
-        padding: 0px 4px;
+        padding: 0 4px;
         font-size: 18px;
         font: normal normal normal 10px/1 FontAwesome;
       }
+
       &:hover {
         &:active {
-          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, 12.5%);
           opacity: 1;
         }
       }
     }
   }
 }
+
 .badge-success {
   background-color: #7ac29a;
 }

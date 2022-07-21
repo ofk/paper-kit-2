@@ -13,6 +13,7 @@
   .container & {
     border-radius: 4px;
   }
+
   .navbar & {
     border-radius: 0;
     left: 0;
@@ -22,9 +23,11 @@
     width: 100%;
     z-index: 3;
   }
+
   .navbar:not(.navbar-transparent) & {
     top: 70px;
   }
+
   .alert-icon {
     display: block;
     font-size: 30px;
@@ -33,10 +36,12 @@
     top: 50%;
     margin-top: -22px;
   }
+
   .alert-wrapper {
     &.message {
       padding-right: 60px;
     }
+
     i {
       position: relative;
       font-size: 20px;
@@ -46,15 +51,19 @@
     }
   }
 }
+
 .alert-info {
   background-color: $bg-info;
 }
+
 .alert-success {
   background-color: $bg-success;
 }
+
 .alert-warning {
   background-color: $bg-warning;
 }
+
 .alert-danger {
   background-color: $bg-danger;
 }

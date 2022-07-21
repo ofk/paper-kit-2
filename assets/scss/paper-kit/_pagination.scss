@@ -14,6 +14,7 @@
   padding: 8px 12px;
   font-weight: $font-weight-bold;
 }
+
 .nav-pills-default > li > a,
 .pagination > li > a:hover,
 .pagination > li > a:focus,
@@ -175,7 +176,7 @@
 
   > li > a {
     display: block;
-    padding: 0px $padding-base-horizontal;
+    padding: 0 $padding-base-horizontal;
     color: $dark-gray;
     text-align: center;
     @include opacity(0.8);
@@ -186,43 +187,55 @@
       @include opacity(1);
     }
   }
+
   > li:first-child a {
     padding-left: 0;
   }
+
   > li.active a {
     color: $info-color;
   }
 }
+
 .nav-icons > li {
   display: inline-block;
+
   > a {
     padding: 0 10px;
     margin-bottom: 10px;
   }
+
   > a i {
     font-size: $font-size-h4;
     margin-bottom: 10px;
     width: $font-size-h4;
   }
 }
+
 .nav-icons.nav-stacked > li {
   display: block;
+
   > a {
     margin-bottom: 20px;
   }
 }
+
 .nav-blue > li.active a {
   color: $primary-color;
 }
+
 .nav-azure > li.active a {
   color: $info-color;
 }
+
 .nav-green > li.active a {
   color: $success-color;
 }
+
 .nav-orange > li.active a {
   color: $warning-color;
 }
+
 .nav-red > li.active a {
   color: $danger-color;
 }
@@ -237,9 +250,11 @@
     text-align: left;
     font-weight: $font-weight-semi;
   }
+
   > li:first-child > a {
     padding-top: 0;
   }
+
   h4 {
     margin-top: 0;
   }
@@ -249,6 +264,7 @@
   > li {
     display: inline-block;
   }
+
   > li > a {
     margin-right: 15px;
   }
@@ -263,30 +279,37 @@
   border-bottom-right-radius: 20px;
   border-top-right-radius: 20px;
 }
+
 .nav-pills-default .nav-item.show .nav-link,
 .nav-pills-default .nav-link.active {
   background-color: $default-color !important;
 }
+
 .nav-pills-primary .nav-item.show .nav-link,
 .nav-pills-primary .nav-link.active {
   background-color: $primary-color !important;
 }
+
 .nav-pills-info .nav-item.show .nav-link,
 .nav-pills-info .nav-link.active {
   background-color: $info-color !important;
 }
+
 .nav-pills-warning .nav-item.show .nav-link,
 .nav-pills-warning .nav-link.active {
   background-color: $warning-color !important;
 }
+
 .nav-pills-success .nav-item.show .nav-link,
 .nav-pills-success .nav-link.active {
   background-color: $success-color !important;
 }
+
 .nav-pills-danger .nav-item.show .nav-link,
 .nav-pills-danger .nav-link.active {
   background-color: $danger-color !important;
 }
+
 .pagination > li > a:hover,
 .pagination > li > a:focus,
 .pagination > li > a:active,
@@ -306,6 +329,7 @@
   color: white;
   border-color: $danger-color;
 }
+
 .nav-pills .nav-link {
   border-radius: 0;
 }

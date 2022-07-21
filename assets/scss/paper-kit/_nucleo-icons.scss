@@ -1,11 +1,11 @@
-/*--------------------------------
+/* --------------------------------
 
 nucleo-icons Web Font - built using nucleoapp.com
 License - nucleoapp.com/license/
 
 -------------------------------- */
 @font-face {
-  font-family: "nucleo-icons";
+  font-family: nucleo-icons;
   src: url("../fonts/nucleo-icons.eot");
   src: url("../fonts/nucleo-icons.eot") format("embedded-opentype"),
     url("../fonts/nucleo-icons.woff2") format("woff2"),
@@ -14,73 +14,86 @@ License - nucleoapp.com/license/
   font-weight: normal;
   font-style: normal;
 }
-/*------------------------
+
+/* ------------------------
 	base class definition
--------------------------*/
+------------------------- */
 .nc-icon {
   display: inline-block;
-  font: normal normal normal 14px/1 "nucleo-icons";
+  font: normal normal normal 14px/1 nucleo-icons;
   font-size: inherit;
   speak: none;
   text-transform: none;
+
   /* Better Font Rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/*------------------------
+
+/* ------------------------
   change icon size
--------------------------*/
+------------------------- */
 .nc-icon.lg {
   font-size: 1.33333333em;
   vertical-align: -16%;
 }
+
 .nc-icon.x2 {
   font-size: 2em;
 }
+
 .nc-icon.x3 {
   font-size: 3em;
 }
-/*----------------------------------
+
+/* ----------------------------------
   add a square/circle background
------------------------------------*/
+----------------------------------- */
 .nc-icon.square,
 .nc-icon.circle {
   padding: 0.33333333em;
   vertical-align: -16%;
   background-color: #eee;
 }
+
 .nc-icon.circle {
   border-radius: 50%;
 }
-/*------------------------
+
+/* ------------------------
   list icons
--------------------------*/
+------------------------- */
 .nc-icon-ul {
   padding-left: 0;
   margin-left: 2.14285714em;
   list-style-type: none;
 }
+
 .nc-icon-ul > li {
   position: relative;
 }
+
 .nc-icon-ul > li > .nc-icon {
   position: absolute;
   left: -1.57142857em;
   top: 0.14285714em;
   text-align: center;
 }
+
 .nc-icon-ul > li > .nc-icon.lg {
   top: 0;
   left: -1.35714286em;
 }
+
 .nc-icon-ul > li > .nc-icon.circle,
 .nc-icon-ul > li > .nc-icon.square {
   top: -0.19047619em;
   left: -1.9047619em;
 }
-/*------------------------
+
+/* ------------------------
   spinning icons
--------------------------*/
+------------------------- */
 .nc-icon.spin {
   -webkit-animation: nc-icon-spin 2s infinite linear;
   -moz-animation: nc-icon-spin 2s infinite linear;
@@ -90,6 +103,7 @@ License - nucleoapp.com/license/
   0% {
     -webkit-transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
   }
@@ -98,6 +112,7 @@ License - nucleoapp.com/license/
   0% {
     -moz-transform: rotate(0deg);
   }
+
   100% {
     -moz-transform: rotate(360deg);
   }
@@ -110,6 +125,7 @@ License - nucleoapp.com/license/
     -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
+
   100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
@@ -118,9 +134,10 @@ License - nucleoapp.com/license/
     transform: rotate(360deg);
   }
 }
-/*------------------------
+
+/* ------------------------
   rotated/flipped icons
--------------------------*/
+------------------------- */
 .nc-icon.rotate-90 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
@@ -129,6 +146,7 @@ License - nucleoapp.com/license/
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
 }
+
 .nc-icon.rotate-180 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
@@ -137,6 +155,7 @@ License - nucleoapp.com/license/
   -o-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+
 .nc-icon.rotate-270 {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
@@ -145,6 +164,7 @@ License - nucleoapp.com/license/
   -o-transform: rotate(270deg);
   transform: rotate(270deg);
 }
+
 .nc-icon.flip-y {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
   -webkit-transform: scale(-1, 1);
@@ -153,6 +173,7 @@ License - nucleoapp.com/license/
   -o-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
+
 .nc-icon.flip-x {
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: scale(1, -1);
@@ -161,9 +182,10 @@ License - nucleoapp.com/license/
   -o-transform: scale(1, -1);
   transform: scale(1, -1);
 }
-/*------------------------
+
+/* ------------------------
 	font icons
--------------------------*/
+------------------------- */
 
 .nc-air-baloon::before {
   content: "\ea01";
