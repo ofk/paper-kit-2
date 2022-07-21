@@ -4,13 +4,8 @@
  */
 .noUi-target,
 .noUi-target * {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -ms-touch-action: none;
   touch-action: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -moz-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
 }
@@ -61,7 +56,6 @@
 
 .noUi-state-tap .noUi-connect,
 .noUi-state-tap .noUi-origin {
-  -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
   transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s;
 }
 
@@ -74,7 +68,6 @@
  */
 .noUi-base,
 .noUi-handle {
-  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -105,7 +98,6 @@
 
 .noUi-connect {
   background: #3fb8af;
-  -webkit-transition: background 450ms;
   transition: background 450ms;
 }
 

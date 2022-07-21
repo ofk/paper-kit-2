@@ -28,40 +28,20 @@
       box-shadow: none;
     }
 
-    &::-moz-placeholder {
+    &::placeholder {
       color: $input-color-placeholder;
       opacity: 1;
-    }
-
-    &:-ms-input-placeholder {
-      color: $input-color-placeholder;
-    }
-
-    &::-webkit-input-placeholder {
-      color: $input-color-placeholder;
     }
   }
 
   &.form-control {
-    & input::-moz-placeholder {
+    & input::placeholder {
       color: $input-color-placeholder;
       // opacity: 1;
-    }
-
-    & input:-ms-input-placeholder {
-      color: $input-color-placeholder;
-    }
-
-    & input::-webkit-input-placeholder {
-      color: $input-color-placeholder;
     }
   }
 
   .badge {
-    -webkit-transition: all 170ms linear;
-    -moz-transition: all 170ms linear;
-    -o-transition: all 170ms linear;
-    -ms-transition: all 170ms linear;
     transition: all 170ms linear;
   }
 

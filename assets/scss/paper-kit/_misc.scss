@@ -15,7 +15,7 @@ a {
     text-decoration: none;
   }
 
-  // @include transition($fast-transition-time, linear);
+  // transition: all $fast-transition-time linear;
 }
 
 hr {
@@ -54,7 +54,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .navbar .alert,
 .carousel-control.right,
 .carousel-control.left {
-  @include transition($general-transition-time, linear);
+  transition: all $general-transition-time linear;
 }
 
 .tagsinput .tag,
@@ -64,13 +64,13 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 [data-toggle="collapse"] i,
 .animation-transition-fast,
 .dropdown-menu .dropdown-item {
-  @include transition($fast-transition-time, linear);
+  transition: all $fast-transition-time linear;
 }
 
 .btn-morphing .fa,
 .btn-morphing .circle,
 .gsdk-collapse {
-  @include transition($slow-transition-time, linear);
+  transition: all $slow-transition-time linear;
 }
 
 .fa {
@@ -140,7 +140,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   left: 0;
   z-index: 1;
   background-color: $white-color;
-  -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
 }
 

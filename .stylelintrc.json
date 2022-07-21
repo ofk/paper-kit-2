@@ -11,31 +11,16 @@
     "function-no-unknown": [
       true,
       {
-        "ignoreFunctions": [
-          "darken",
-          "lighten",
-          "DXImageTransform.Microsoft.BasicImage",
-          "alpha",
-          "color-stop",
-          "-webkit-gradient"
-        ]
+        "ignoreFunctions": ["darken", "lighten"]
       }
     ],
-    "declaration-block-no-duplicate-properties": null,
-    "declaration-block-no-shorthand-property-overrides": null,
     "block-no-empty": null,
     "no-descending-specificity": null,
     "no-duplicate-selectors": null,
     "keyframes-name-pattern": null,
-    "number-max-precision": null,
-    "value-no-vendor-prefix": null,
-    "property-no-vendor-prefix": null,
     "declaration-block-no-redundant-longhand-properties": null,
     "selector-class-pattern": null,
     "selector-id-pattern": null,
-    "selector-no-vendor-prefix": null,
-    "at-rule-no-vendor-prefix": null,
-    "value-keyword-case": null,
     "function-name-case": null,
     "scss/comment-no-empty": null,
     "scss/no-global-function-names": null

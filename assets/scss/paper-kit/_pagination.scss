@@ -179,12 +179,12 @@
     padding: 0 $padding-base-horizontal;
     color: $dark-gray;
     text-align: center;
-    @include opacity(0.8);
+    opacity: 0.8;
 
     &:hover,
     &:focus {
       background-color: $transparent-bg;
-      @include opacity(1);
+      opacity: 1;
     }
   }
 

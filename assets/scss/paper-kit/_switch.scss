@@ -10,26 +10,19 @@
   display: inline-block;
   width: 61px;
   overflow: hidden;
-  line-height: 1.72222;
+  line-height: 1.7222;
   text-align: left;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
   user-select: none;
   border-radius: 30px;
 
   /*   this code is for fixing safari bug with hidden overflow for border-radius   */
-  -webkit-mask: url("../img/mask.png") 0 0 no-repeat;
   mask: url("../img/mask.png") 0 0 no-repeat;
-  -webkit-mask-size: 61px 28px;
   mask-size: 61px 28px;
 }
 
 .has-switch.deactivate {
   cursor: default !important;
-  filter: alpha(opacity=50);
   opacity: 0.5;
 }
 
@@ -45,7 +38,6 @@
 }
 
 .has-switch > div.switch-animate {
-  -webkit-transition: left 0.25s ease-out;
   transition: left 0.25s ease-out;
 }
 
@@ -82,7 +74,6 @@
   text-align: center;
   text-indent: -10px;
   cursor: pointer;
-  -webkit-transition: 0.25s ease-out;
   transition: 0.25s ease-out;
 }
 
@@ -118,8 +109,6 @@
   margin: 2px -13px;
   vertical-align: middle;
   border-radius: 12px;
-  -webkit-transition: 0.25s ease-out;
-  transition: all 0.25s ease-out 0s;
   transition: 0.25s ease-out;
 }
 

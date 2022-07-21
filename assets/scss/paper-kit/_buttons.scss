@@ -14,20 +14,20 @@
   }
 
   @include btn-styles($default-color, $default-states-color);
-  @include transition($fast-transition-time, linear);
+
+  transition: all $fast-transition-time linear;
 
   &:hover,
   &:focus {
     outline: 0 !important;
-    @include box-shadow(none);
+    box-shadow: none;
   }
 
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    @include box-shadow(none);
-
     outline: 0 !important;
+    box-shadow: none;
   }
 
   &[class*="btn-outline-"] {
@@ -170,7 +170,7 @@
   &:disabled,
   &[disabled],
   &.disabled {
-    @include opacity(0.5);
+    opacity: 0.5;
   }
 }
 

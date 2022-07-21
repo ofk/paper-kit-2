@@ -29,10 +29,6 @@
     content: " ";
     background-color: #aaa7a4;
     border-radius: 6px;
-    -webkit-transition: opacity 0.3s linear;
-    -moz-transition: opacity 0.3s linear;
-    -o-transition: opacity 0.3s linear;
-    -ms-transition: opacity 0.3s linear;
     transition: opacity 0.3s linear;
   }
 
@@ -123,7 +119,7 @@
   display: block;
   content: " ";
   opacity: 0;
-  @include transition-opacity(0.3s, linear);
+  transition: opacity 0.3s linear;
 }
 
 .form-check-radio input[type="radio"]:checked + .form-check-sign::after {
