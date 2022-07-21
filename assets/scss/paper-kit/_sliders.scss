@@ -1,23 +1,23 @@
 .noUi-target,
 .noUi-target * {
-  -webkit-touch-callout: none;
+  box-sizing: border-box;
   -ms-touch-action: none;
   user-select: none;
-  box-sizing: border-box;
+  -webkit-touch-callout: none;
 }
 
 .noUi-base {
+  position: relative;
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 .noUi-origin {
   position: absolute;
-  right: 0;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
+  left: 0;
 }
 
 .noUi-handle {
@@ -43,18 +43,18 @@
 }
 
 .noUi-handle {
+  top: -6px;
+  left: -10px;
   box-sizing: border-box;
   width: 14px;
   height: 14px;
-  left: -10px;
-  top: -6px;
   cursor: pointer;
-  border-radius: 100%;
-  transition: all 0.2s ease-out;
-  border: 1px solid;
   background: #fff;
+  border: 1px solid;
+  border-radius: 100%;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 14%), 0 3px 1px -2px rgba(0, 0, 0, 20%),
     0 1px 5px 0 rgba(0, 0, 0, 12%);
+  transition: all 0.2s ease-out;
 }
 
 .noUi-vertical .noUi-handle {
@@ -76,10 +76,10 @@
 }
 
 .noUi-origin {
-  margin: 0;
-  border-radius: 0;
   height: 2px;
+  margin: 0;
   background: #c8c8c8;
+  border-radius: 0;
 }
 
 .noUi-origin[style^="left: 0"] .noUi-handle {
@@ -101,10 +101,10 @@
 }
 
 .noUi-vertical {
-  height: 100%;
-  width: 2px;
-  margin: 0 15px;
   display: inline-block;
+  width: 2px;
+  height: 100%;
+  margin: 0 15px;
 }
 
 .noUi-handle.noUi-active {

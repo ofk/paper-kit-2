@@ -1,13 +1,13 @@
 .page-header {
-  background-color: $header-background;
-  background-position: center center;
-  background-size: cover;
+  position: relative;
+  z-index: 1;
+  width: 100%;
   min-height: 100vh;
   max-height: 999px;
   overflow: hidden;
-  position: relative;
-  width: 100%;
-  z-index: 1;
+  background-color: $header-background;
+  background-position: center center;
+  background-size: cover;
 
   &.page-header-small {
     min-height: 65vh !important;
@@ -20,11 +20,11 @@
 
   .page-header-image {
     position: absolute;
-    background-size: cover;
-    background-position: center center;
+    z-index: -1;
     width: 100%;
     height: 100%;
-    z-index: -1;
+    background-position: center center;
+    background-size: cover;
   }
 
   .content-center {
@@ -32,32 +32,32 @@
     top: 50%;
     left: 50%;
     z-index: 3;
+    width: 100%;
+    color: #fff;
+    text-align: center;
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    width: 100%;
   }
 
   .motto {
+    position: relative;
+    z-index: 2;
     color: #fff;
     text-align: center;
-    z-index: 2;
-    position: relative;
   }
 
   .filter {
     &::after {
-      background-color: rgba(0, 0, 0, 50%);
-      content: "";
-      display: block;
-      height: 100%;
-      left: 0;
       position: absolute;
       top: 0;
-      width: 100%;
+      left: 0;
       z-index: 2;
+      display: block;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: rgba(0, 0, 0, 50%);
     }
 
     &.filter-primary::after {
@@ -82,9 +82,9 @@
   }
 
   .container {
-    color: $white-color;
     position: relative;
     z-index: 3;
+    color: $white-color;
   }
 
   .description {
@@ -138,8 +138,8 @@ video {
   .subscribe-line {
     .form-group {
       .form-control {
-        line-height: 50px !important;
         height: 50px !important;
+        line-height: 50px !important;
       }
     }
   }
@@ -158,9 +158,9 @@ video {
   }
 
   .nav-stacked .active.nav-link::after {
+    top: 13px !important;
     right: -2px !important;
     bottom: 0 !important;
-    top: 13px !important;
   }
 
   .buy-product {

@@ -3,29 +3,29 @@
 }
 
 .page-header {
-  background-color: #b2afab;
-  background-position: center center;
-  background-size: cover;
-  min-height: 100vh;
-  max-height: 999px;
-  overflow: hidden;
   position: relative;
-  width: 100%;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 999px;
+  overflow: hidden;
+  background-color: #b2afab;
+  background-position: center center;
+  background-size: cover;
 
   .filter::after {
-    background-color: rgba(0, 0, 0, 50%);
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    top: 0;
     position: absolute;
-    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(0, 0, 0, 50%);
   }
 
   &.page-header-small {
@@ -46,15 +46,15 @@
 }
 
 .page-header .motto {
-  text-align: left;
+  position: relative;
   z-index: 3;
   color: #fff;
-  position: relative;
+  text-align: left;
 }
 
 .landing-section {
-  padding: 100px 0;
   z-index: 1;
+  padding: 100px 0;
 }
 
 .section-buttons {
@@ -72,10 +72,10 @@
 .team-player .img-circle,
 .team-player .img-thumbnail {
   display: block;
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
   width: 120px;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .contact-form {
@@ -100,18 +100,18 @@
 }
 
 .register-background .container {
-  margin-top: 11%;
   position: relative;
   z-index: 3;
+  margin-top: 11%;
 }
 
 .register-footer {
-  bottom: 20px;
   position: absolute;
+  bottom: 20px;
   z-index: 1;
   width: 100%;
-  background: transparent;
   color: $white-color;
+  background: transparent;
 }
 
 .register-footer .fa-heart {
@@ -144,10 +144,10 @@
 }
 
 .owner .avatar {
-  padding: 15px;
-  max-width: 180px;
-  margin: -85px auto 0;
   display: inline-block;
+  max-width: 180px;
+  padding: 15px;
+  margin: -85px auto 0;
 }
 
 .owner .name h4 {
@@ -155,8 +155,8 @@
 }
 
 .profile-tabs {
-  margin: 50px 0;
   min-height: 300px;
+  margin: 50px 0;
 }
 
 #following h3 {
@@ -180,30 +180,30 @@
 }
 
 .title-brand {
+  position: relative;
+  display: block;
   max-width: 730px;
   margin: 0 auto;
-  position: relative;
-  text-align: center;
   color: #fff;
-  display: block;
+  text-align: center;
 
   .type {
     position: absolute;
-    font-size: 20px;
-    background: #132026;
-    padding: 6px 10px;
-    border-radius: 4px;
     top: 0;
-    font-weight: 600;
-    margin-top: 10px;
     right: -15px;
+    padding: 6px 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    background: #132026;
+    border-radius: 4px;
   }
 }
 
 .presentation-title {
+  margin: 0;
   font-size: 8em;
   font-weight: 700;
-  margin: 0;
   color: #fff;
   background: #fbf8ec;
   background: -moz-linear-gradient(top, #fff 35%, #4e6773 100%);
@@ -221,28 +221,28 @@
 
 .category-absolute {
   position: absolute;
-  text-align: center;
   top: 100vh;
-  margin-top: -60px;
-  padding: 0 15px;
   width: 100%;
+  padding: 0 15px;
+  margin-top: -60px;
   color: rgba(255, 255, 255, 50%);
+  text-align: center;
 
   .creative-tim-logo {
-    max-width: 140px;
+    position: relative;
     top: -2px;
     left: 3px;
-    position: relative;
+    max-width: 140px;
   }
 }
 
 .fog-low {
   position: absolute;
-  left: 0;
   bottom: 0;
-  margin-left: -35%;
-  margin-bottom: -50px;
+  left: 0;
   width: 110%;
+  margin-bottom: -50px;
+  margin-left: -35%;
   opacity: 0.85;
 
   img {
@@ -263,9 +263,9 @@
 
 .moving-clouds {
   position: absolute;
-  z-index: 1;
   bottom: 0;
   left: 0;
+  z-index: 1;
   width: 250.625em;
   height: 43.75em;
   -webkit-animation: cloudLoop 80s linear infinite;

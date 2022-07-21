@@ -38,7 +38,6 @@
     "value-keyword-case": null,
     "function-name-case": null,
     "scss/comment-no-empty": null,
-    "scss/no-global-function-names": null,
-    "order/properties-order": null
+    "scss/no-global-function-names": null
   }
 }

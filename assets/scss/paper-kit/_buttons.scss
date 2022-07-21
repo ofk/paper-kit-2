@@ -1,12 +1,12 @@
 .btn {
   box-sizing: border-box;
-  border-width: $border-thick;
+  padding: 0.5rem $padding-base-horizontal;
   font-size: $font-size-small;
   font-weight: $font-weight-bold;
-  padding: 0.5rem $padding-base-horizontal;
   line-height: 1.75;
-  cursor: pointer;
   text-transform: uppercase;
+  cursor: pointer;
+  border-width: $border-thick;
 
   &.btn-border,
   &.btn-link {
@@ -31,8 +31,8 @@
   }
 
   &[class*="btn-outline-"] {
-    background-image: none;
     background-color: transparent;
+    background-image: none;
   }
 
   .nc-icon {
@@ -42,19 +42,19 @@
 }
 
 .btn-just-icon {
-  border-radius: $border-radius-btn-large;
-  height: 40px;
   width: 40px;
   min-width: 40px;
+  height: 40px;
   padding: 8px;
+  border-radius: $border-radius-btn-large;
 
   &.btn-sm {
     padding: 4px !important;
   }
 
   i {
-    font-size: $font-size-medium;
     padding: 2px 0;
+    font-size: $font-size-medium;
   }
 }
 
@@ -145,8 +145,8 @@
     &:active,
     &.active,
     .open > &.dropdown-toggle {
-      background-color: $white-color;
       color: $default-color;
+      background-color: $white-color;
     }
   }
 
@@ -175,8 +175,8 @@
 }
 
 .btn-link {
-  border-color: transparent !important;
   padding: $padding-base-vertical $padding-base-horizontal;
+  border-color: transparent !important;
 
   &:hover,
   &:focus,
@@ -223,32 +223,32 @@
 .btn-group.select .caret {
   position: absolute;
   top: 50%;
-  margin-top: -1px;
   right: 8px;
+  margin-top: -1px;
 }
 
 .btn-just-icon {
   &.btn-sm {
-    height: 30px;
     width: 30px;
     min-width: 30px;
+    height: 30px;
     padding: 0;
 
     i {
-      font-size: $font-size-small;
       top: 1px !important;
+      font-size: $font-size-small;
     }
   }
 
   &.btn-lg {
-    height: 50px;
     width: 50px;
     min-width: 50px;
+    height: 50px;
     padding: 13px;
 
     i {
-      font-size: 18px;
       padding: 0;
+      font-size: 18px;
     }
   }
 
@@ -262,8 +262,8 @@
 }
 
 .btn.btn-link:focus {
-  box-shadow: none !important;
   text-decoration: none;
+  box-shadow: none !important;
 }
 
 .column .btn-link {

@@ -1,13 +1,13 @@
 /*           badges & Progress-bar              */
 .badge {
-  padding: 0.4em 0.9em;
-  color: $white-color;
-  font-weight: 500;
-  font-size: 0.75em;
-  text-transform: uppercase;
   display: inline-block;
-  margin-bottom: 3px;
+  padding: 0.4em 0.9em;
   padding-top: 5px;
+  margin-bottom: 3px;
+  font-size: 0.75em;
+  font-weight: 500;
+  color: $white-color;
+  text-transform: uppercase;
 
   &:focus {
     outline: none;

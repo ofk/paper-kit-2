@@ -1,29 +1,29 @@
 .carousel-control {
+  text-shadow: none;
   background-color: $danger-color;
   border-radius: 50%;
   opacity: 1;
-  text-shadow: none;
 
   &:hover,
   &:focus {
-    opacity: 1;
     background-color: $danger-states-color;
+    opacity: 1;
   }
 }
 
 .carousel-control.left {
-  height: 30px;
   top: 50%;
-  width: 30px;
   left: 25px;
+  width: 30px;
+  height: 30px;
   opacity: 0;
 }
 
 .carousel-control.right {
-  height: 30px;
-  right: 25px;
   top: 50%;
+  right: 25px;
   width: 30px;
+  height: 30px;
   opacity: 0;
 }
 
@@ -31,13 +31,13 @@
 .carousel-control .icon-next,
 .carousel-control .fa,
 .carousel-control .fa {
-  display: inline-block;
   z-index: 5;
+  display: inline-block;
 }
 
 .carousel-control .fa {
-  font-size: 26px;
   margin: 2px;
+  font-size: 26px;
 }
 
 .carousel-control.left,
@@ -46,9 +46,9 @@
 }
 
 .page-carousel {
-  border-radius: $border-radius-extreme !important;
-  border: none !important;
   width: 100%;
+  border: none !important;
+  border-radius: $border-radius-extreme !important;
 }
 
 .carousel-inner {
@@ -75,8 +75,8 @@
 .page-carousel:hover {
   .carousel-control.right,
   .carousel-control.left {
-    opacity: 1;
     z-index: 1;
+    opacity: 1;
   }
 }
 
