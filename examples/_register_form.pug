@@ -1,0 +1,35 @@
+.card
+  .card-body
+    h3.card-title.text-center Welcome
+    p.text-center
+      a.btn.btn-default.rounded-pill(href="#pablo")
+        i.fab.fa-facebook-square
+      = " "
+      a.btn.btn-default.rounded-pill(href="#pablo")
+        i.fab.fa-google-plus
+      = " "
+      a.btn.btn-default.rounded-pill(href="#pablo")
+        i.fab.fa-twitter
+    form
+      .mb-3
+        label.form-label(for="exampleInputEmail1") Email
+        .input-group
+          span.input-group-text
+            i.far.fa-envelope
+          input#exampleInputEmail1.form-control(
+            type="email",
+            placeholder="Email"
+          )
+      .mb-3
+        label.form-label(for="exampleInputPassword1") Password
+        .input-group
+          span.input-group-text
+            i.fas.fa-key
+          input#exampleInputPassword1.form-control(
+            type="password",
+            placeholder="Password"
+          )
+      .d-grid.gap-2
+        button.btn.btn-danger.rounded-pill(type="submit") Register
+    p.text-center
+      a.btn.btn-link(href="#") Forgot password?

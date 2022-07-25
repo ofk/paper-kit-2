@@ -1,52 +1,22 @@
-doctype html
-//
-  =========================================================
-  Paper Kit 2 - v2.2.0
-  =========================================================
-  Product Page: https://www.creative-tim.com/product/paper-kit-2
-  Copyright 2019 Creative Tim (https://www.creative-tim.com)
-  Licensed under MIT (https://github.com/creativetimofficial/paper-kit-2/blob/master/LICENSE.md)
-  Coded by Creative Tim
-  =========================================================
-  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-html(lang="en")
-  head
-    meta(charset="utf-8")
-    title Paper Kit by Creative Tim
-    include _head
-  body.register-page.sidebar-collapse
-    include _navbar
-    .page-header(
-      style="background-image: url('../assets/img/login-image.jpg')"
-    )
-      .filter
+extends _layout
+
+block main-container
+  div(style="background-image: url('../assets/img/login-image.jpg')")
+    main
       .container
-        .row
-          .col-lg-4.ml-auto.mr-auto
-            .card.card-register
-              h3.title.mx-auto Welcome
-              .social-line.text-center
-                a.btn.btn-neutral.btn-facebook.btn-just-icon(href="#pablo")
-                  i.fa.fa-facebook-square
-                a.btn.btn-neutral.btn-google.btn-just-icon(href="#pablo")
-                  i.fa.fa-google-plus
-                a.btn.btn-neutral.btn-twitter.btn-just-icon(href="#pablo")
-                  i.fa.fa-twitter
-              form.register-form
-                label Email
-                input.form-control(type="text", placeholder="Email")
-                label Password
-                input.form-control(type="password", placeholder="Password")
-                button.btn.btn-danger.btn-block.btn-round
-                  | Register
-              .forgot
-                a.btn.btn-link.btn-danger(href="#") Forgot password?
-      .footer.register-footer.text-center
-        h6
-          | ©
-          script.
-            document.write(new Date().getFullYear());
-          | , made with
-          i.fa.fa-heart.heart
-          | by Creative Tim
-    include _scripts
+        .row.py-5
+          .col-lg-4.col-md-6.mx-auto
+            include _register_form
+
+    footer.container.py-3
+      .text-center
+        | ©
+        script.
+          document.write(new Date().getFullYear());
+        | , made with
+        = " "
+        i.fas.fa-heart
+        = " "
+        | by Creative Tim
+
+block footer-container

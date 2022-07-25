@@ -1,1226 +1,996 @@
-doctype html
-//
-  =========================================================
-  Paper Kit 2 - v2.2.0
-  =========================================================
-  Product Page: https://www.creative-tim.com/product/paper-kit-2
-  Copyright 2019 Creative Tim (https://www.creative-tim.com)
-  Licensed under MIT (https://github.com/creativetimofficial/paper-kit-2/blob/master/LICENSE.md)
-  Coded by Creative Tim
-  =========================================================
-  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-html(lang="en")
-  head
-    meta(charset="utf-8")
-    title Paper Kit by Creative Tim
-    include _head
-  body.index-page.sidebar-collapse
-    include _navbar_index
-    .page-header.section-dark(
-      style="background-image: url('../assets/img/antoine-barres.jpg')"
+extends _layout
+
+include _navbar
+
+block navbar-docs
+
+block append navbar-shares
+  li.nav-item
+    a.nav-link(
+      href="https://demos.creative-tim.com/paper-kit-2/docs/1.0/getting-started/introduction.html",
+      target="_blank"
     )
-      .filter
-      .content-center
-        .container
-          .title-brand
-            h1.presentation-title Paper Kit 2
-            .fog-low
-              img(src="../assets/img/fog-low.png", alt="")
-            .fog-low.right
-              img(src="../assets/img/fog-low.png", alt="")
-          h2.presentation-subtitle.text-center
-            | Make your mark with a Free Bootstrap 4 UI Kit!
-      .moving-clouds(style="background-image: url('../assets/img/clouds.png')")
-      h6.category.category-absolute
+      i.fas.fa-book
+      = " "
+      | Documentation
+  li.nav-item
+    a.btn.btn-danger.rounded-pill(
+      href="https://www.creative-tim.com/product/paper-kit-2-pro?ref=pk2-free-local",
+      target="_blank"
+    ) Upgrade to Pro
+
+block main
+  section.bg-dark.text-bg-dark.py-3
+    .container.text-center
+      .py-5
+        h1 Paper Kit 2
+        p.lead Make your mark with a Free Bootstrap 4 UI Kit!
+      p
         | Designed and coded by
         a(href="https://www.creative-tim.com", target="_blank")
-          img.creative-tim-logo(
-            src="../assets/img/creative-tim-white-slim2.png"
+          img(src="../assets/img/creative-tim-white-slim2.png", width="140")
+
+  section.pt-5
+    h2.container Basic Elements
+
+    .container
+      h3 Buttons
+      h4 Pick your style
+      .row.pt-3.pb-5
+        .col-12
+          button.btn.btn-info(type="button") Default
+          = " "
+          button.btn.btn-info.rounded-pill(type="button") Round
+          = " "
+          button.btn.btn-info.rounded-pill(type="button")
+            i.fa.fa-heart
+            = " "
+            | With Icon
+          = " "
+          button.btn.btn-info.rounded-circle(type="button")
+            i.fa.fa-heart
+          = " "
+          button.btn.btn-link.text-info(type="button") Simple
+
+      h4 Pick your size
+      .row.pt-3.pb-5
+        .col-12
+          button.btn.btn-outline-danger.btn-sm(type="button") Small
+          = " "
+          button.btn.btn-outline-danger(type="button") Regular
+          = " "
+          button.btn.btn-outline-danger.btn-lg(type="button") Large
+
+      h4 Pick your color
+      .row.pt-3
+        .col-12
+          button.btn.btn-outline-secondary.rounded-pill(type="button") Default
+          = " "
+          button.btn.btn-outline-primary.rounded-pill(type="button") Primary
+          = " "
+          button.btn.btn-outline-info.rounded-pill(type="button") Info
+          = " "
+          button.btn.btn-outline-success.rounded-pill(type="button") Success
+          = " "
+          button.btn.btn-outline-warning.rounded-pill(type="button") Warning
+          = " "
+          button.btn.btn-outline-danger.rounded-pill(type="button") Danger
+          = " "
+          button.btn.btn-outline-neutral.rounded-pill(type="button") Neutral
+      .row.pt-3.pb-5
+        .col-12
+          button.btn.btn-secondary.rounded-pill(type="button") Default
+          = " "
+          button.btn.btn-primary.rounded-pill(type="button") Primary
+          = " "
+          button.btn.btn-info.rounded-pill(type="button") Info
+          = " "
+          button.btn.btn-success.rounded-pill(type="button") Success
+          = " "
+          button.btn.btn-warning.rounded-pill(type="button") Warning
+          = " "
+          button.btn.btn-danger.rounded-pill(type="button") Danger
+          = " "
+          button.btn.btn-neutral.rounded-pill(type="button") Neutral
+
+      h3 Links
+      .row.pt-3.pb-5
+        .col-12
+          a.btn.btn-link.text-secondary(href="#0") Default
+          a.btn.btn-link.text-primary(href="#0") Primary
+          a.btn.btn-link.text-success(href="#0") Success
+          a.btn.btn-link.text-info(href="#0") Info
+          a.btn.btn-link.text-warning(href="#0") Warning
+          a.btn.btn-link.text-danger(href="#0") Danger
+          a.btn.btn-link.text-neutral(href="#0") Neutral
+
+      h3 Inputs
+      .row.pt-3.pb-5
+        .col-sm-3
+          .form-group
+            input.form-control(type="text", placeholder="Default")
+        .col-sm-3
+          .form-group
+            input.form-control.is-valid(type="text", value="Success")
+        .col-sm-3
+          .form-group.has-danger
+            input.form-control.is-invalid(type="text", value="Error")
+            .invalid-feedback Sorry, that username's taken. Try another?
+        .col-sm-3
+          .input-group
+            input.form-control(type="text", placeholder="Username")
+            span.input-group-text
+              i.fas.fa-users
+
+      .row
+        .col-sm-6.col-lg-3
+          h3 Checkboxes
+          .pt-3.pb-5
+            .form-check
+              label.form-check-label
+                input.form-check-input(type="checkbox")
+                | Unchecked
+            .form-check
+              label.form-check-label
+                input.form-check-input(type="checkbox", checked)
+                | Checked
+            .form-check.disabled
+              label.form-check-label
+                input.form-check-input(type="checkbox", disabled)
+                | Disabled unchecked
+            .form-check.disabled
+              label.form-check-label
+                input.form-check-input(type="checkbox", disabled, checked)
+                | Disabled checked
+
+        .col-sm-6.col-lg-3
+          h3 Radio Buttons
+          .pt-3.pb-5
+            .form-check-radio
+              label.form-check-label
+                input.form-check-input(
+                  type="radio",
+                  name="exampleRadios",
+                  value="option1"
+                )
+                | Radio is off
+            .form-check-radio
+              label.form-check-label
+                input.form-check-input(
+                  type="radio",
+                  name="exampleRadios",
+                  value="option2",
+                  checked
+                )
+                | Radio is on
+            .form-check-radio.disabled
+              label.form-check-label
+                input.form-check-input(
+                  type="radio",
+                  name="exampleRadios",
+                  value="option3",
+                  disabled
+                )
+                | Disabled radio is off
+            .form-check-radio.disabled
+              label.form-check-label
+                input.form-check-input(
+                  type="radio",
+                  name="exampleRadios",
+                  value="option4",
+                  checked,
+                  disabled
+                )
+                | Disabled radio is on
+
+        .col-sm-6.col-lg-3
+          h3 Toggle Buttons
+          .pt-3.pb-5
+            .form-check.form-switch
+              label.form-check-label
+                input.form-check-input(type="checkbox", role="switch", checked)
+            .form-check.form-switch
+              label.form-check-label
+                input.form-check-input(type="checkbox", role="switch")
+
+        .col-sm-6.col-lg-3
+          h3 Sliders
+          .pt-3.pb-5
+            input.form-range(type="range")
+
+      h3 Menu
+      .row.pt-3.pb-5
+        .col-md-6
+          +navbar-raw('exampleNavbar1', 'Menu').navbar-dark.bg-primary.rounded(
+            href="#"
           )
-    .main
-      .section.section-buttons
-        .container
-          .title
-            h2 Basic Elements
-          #buttons
-            .title
-              h3
-                | Buttons
-                br
-                small Pick your style
-            .row
-              .col-md-8
-                button.btn.btn-info(type="button") Default
-                button.btn.btn-info.btn-round(type="button")
-                  | Round
-                button.btn.btn-info.btn-round(type="button")
-                  i.fa.fa-heart
-                  | With Icon
-                button.btn.btn-info.btn-just-icon(type="button")
-                  i.fa.fa-heart
-                button.btn.btn-info.btn-link(type="button")
-                  | Simple
-            .title
-              h3
-                small Pick your size
-            .row
-              .col-md-8
-                button.btn.btn-outline-danger.btn-sm(type="button")
-                  | Small
-                button.btn.btn-outline-danger(type="button")
-                  | Regular
-                button.btn.btn-outline-danger.btn-lg(type="button")
-                  | Large
-            .title
-              h3
-                small Pick your color
-            .row
-              .col-md-8
-                button.btn.btn-outline-default.btn-round(type="button")
-                  | Default
-                button.btn.btn-outline-primary.btn-round(type="button")
-                  | Primary
-                button.btn.btn-outline-info.btn-round(type="button")
-                  | Info
-                button.btn.btn-outline-success.btn-round(type="button")
-                  | Success
-                button.btn.btn-outline-warning.btn-round(type="button")
-                  | Warning
-                button.btn.btn-outline-danger.btn-round(type="button")
-                  | Danger
-                button.btn.btn-outline-neutral.btn-round(type="button")
-                  | Neutral
-            br
-            .row
-              .col-md-8
-                button.btn.btn-default.btn-round(type="button")
-                  | Default
-                button.btn.btn-primary.btn-round(type="button")
-                  | Primary
-                button.btn.btn-info.btn-round(type="button")
-                  | Info
-                button.btn.btn-success.btn-round(type="button")
-                  | Success
-                button.btn.btn-warning.btn-round(type="button")
-                  | Warning
-                button.btn.btn-danger.btn-round(type="button")
-                  | Danger
-                button.btn.btn-neutral.btn-round(type="button")
-                  | Neutral
-          .title
-            h3 Links
-          .row
-            .col-md-8
-              a.btn.btn-link.btn-default(href="#0") Default
-              a.btn.btn-link.btn-primary(href="#0") Primary
-              a.btn.btn-link.btn-success(href="#0") Success
-              a.btn.btn-link.btn-info(href="#0") Info
-              a.btn.btn-link.btn-warning(href="#0") Warning
-              a.btn.btn-link.btn-danger(href="#0") Danger
-              a.btn.btn-link.btn-neutral(href="#0") Neutral
-          .title
-            h3 Inputs
-          .row
-            .col-sm-3
-              .form-group
-                input.form-control(type="text", placeholder="Default")
-            .col-sm-3
-              .form-group.has-success
-                input#inputSuccess1.form-control.form-control-success(
-                  type="text",
-                  value="Success"
-                )
-            .col-sm-3
-              .form-group.has-danger
-                input#inputDanger1.form-control.form-control-danger(
-                  type="text",
-                  value="Error"
-                )
-                .form-control-feedback
-                  | Sorry, that username's taken. Try another?
-            .col-sm-3
-              .input-group
-                input.form-control(type="text", placeholder="Username")
-                .input-group-append
-                  span.input-group-text
-                    i.fa.fa-group(aria-hidden="true")
-          br
-          .row
-            .col-sm-6.col-lg-3
-              .title
-                h3 Checkboxes
-              .form-check
-                label.form-check-label
-                  input.form-check-input(type="checkbox", value="")
-                  | Unchecked
-                  span.form-check-sign
-              .form-check
-                label.form-check-label
-                  input.form-check-input(type="checkbox", value="", checked="")
-                  | Checked
-                  span.form-check-sign
-              .form-check.disabled
-                label.form-check-label
-                  input.form-check-input(
-                    type="checkbox",
-                    value="",
-                    disabled=""
-                  )
-                  | Disabled unchecked
-                  span.form-check-sign
-              .form-check.disabled
-                label.form-check-label
-                  input.form-check-input(
-                    type="checkbox",
-                    value="",
-                    disabled="",
-                    checked=""
-                  )
-                  | Disabled checked
-                  span.form-check-sign
-            .col-sm-6.col-lg-3
-              .title
-                h3 Radio Buttons
-              .form-check-radio
-                label.form-check-label
-                  input#exampleRadios1.form-check-input(
-                    type="radio",
-                    name="exampleRadios",
-                    value="option1"
-                  )
-                  | Radio is off
-                  span.form-check-sign
-              .form-check-radio
-                label.form-check-label
-                  input#exampleRadios2.form-check-input(
-                    type="radio",
-                    name="exampleRadios",
-                    value="option2",
-                    checked=""
-                  )
-                  | Radio is on
-                  span.form-check-sign
-              .form-check-radio.disabled
-                label.form-check-label
-                  input#exampleRadios3.form-check-input(
-                    type="radio",
-                    name="exampleRadios",
-                    value="option3",
-                    disabled=""
-                  )
-                  | Disabled radio is off
-                  span.form-check-sign
-              .form-check-radio.disabled
-                label.form-check-label
-                  input#exampleRadios4.form-check-input(
-                    type="radio",
-                    name="exampleRadioz",
-                    value="option4",
-                    checked="",
-                    disabled=""
-                  )
-                  | Disabled radio is on
-                  span.form-check-sign
-            .col-sm-6.col-lg-3
-              .title
-                h3 Toggle Buttons
-              #switches
-                label
-                  input(
-                    type="checkbox",
-                    data-toggle="switch",
-                    checked="",
-                    data-on-color="primary",
-                    data-off-color="primary"
-                  )
-                  span.toggle
-                br
-                label
-                  input(
-                    type="checkbox",
-                    data-toggle="switch",
-                    data-off-color="primary",
-                    data-on-color="primary"
-                  )
-                  span.toggle
-            .col-sm-6.col-lg-3
-              .title
-                h3 Sliders
-              #sliderRegular.slider
-              br
-              #sliderDouble.slider.slider-primary
-      .section.pt-0
-        .container
-          .title
-            h3 Menu
-          br
-          .row
-            .col-md-6
-              nav.navbar.navbar-expand-lg.bg-primary.rounded
-                a.navbar-brand(href="#") Menu
-                button.navbar-toggler.navbar-toggler-right(
-                  type="button",
-                  data-toggle="collapse",
-                  data-target="#navbar-menu",
-                  aria-controls="navbarSupportedContent",
-                  aria-expanded="false",
-                  aria-label="Toggle navigation"
-                )
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                #navbar-menu.collapse.navbar-collapse
-                  ul.navbar-nav.mr-auto
-                    li.nav-item
-                      a.nav-link(href="#pk") Link
-                    li.nav-item
-                      a.nav-link(href="#pk") Link
-                    .nav-item.dropdown
-                      a#dropdownMenuButton.nav-link.dropdown-toggle(
-                        data-toggle="dropdown",
-                        href="#pk",
-                        role="button",
-                        aria-haspopup="true",
-                        aria-expanded="false"
-                      ) Dropdown
-                      ul.dropdown-menu.dropdown-info(
-                        aria-labelledby="dropdownMenuButton"
-                      )
-                        li.dropdown-header Dropdown header
-                        a.dropdown-item(href="#pk") Action
-                        a.dropdown-item(href="#pk") Another action
-                        a.dropdown-item(href="#pk") Something else here
-                        .dropdown-divider
-                        a.dropdown-item(href="#pk") Separated link
-                        .dropdown-divider
-                        a.dropdown-item(href="#pk") Another separated link
-            .col-md-6
-              nav.navbar.navbar-expand-lg.bg-danger.rounded
-                a.navbar-brand(href="#") Icons
-                button.navbar-toggler.navbar-toggler-right(
-                  type="button",
-                  data-toggle="collapse",
-                  data-target="#navbar-menu-icon",
-                  aria-controls="navbarSupportedContent",
-                  aria-expanded="false",
-                  aria-label="Toggle navigation"
-                )
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                #navbar-menu-icon.collapse.navbar-collapse
-                  ul.navbar-nav.ml-auto
-                    li.nav-item.active
-                      a.nav-link(href="#pk")
-                        i.fa.fa-envelope-o(aria-hidden="true")
-                    li.nav-item
-                      a.nav-link(href="#pk")
-                        i.fa.fa-user-o(aria-hidden="true")
-                    .nav-item.dropdown
-                      a.nav-link.dropdown-toggle(
-                        data-toggle="dropdown",
-                        href="#pk",
-                        role="button",
-                        aria-haspopup="true",
-                        aria-expanded="false"
-                      )
-                        i.fa.fa-cog(aria-hidden="true")
-                      ul.dropdown-menu.dropdown-menu-right.dropdown-danger
-                        li.dropdown-header(href="#pk")
-                          | Dropdown header
-                        a.dropdown-item(href="#pk") Another action
-                        a.dropdown-item(href="#pk") Something else here
-                        .dropdown-divider
-                        a.dropdown-item(href="#pk") Separated link
-      .section.section-navigation
-        .container.tim-container
-          .title
-            h3 Navigation Areas
-        #navbar
-          .navigation-example(
-            style="background-image: url('../assets/img/ilya-yakover.jpg')"
+            ul.navbar-nav
+              li.nav-item
+                a.nav-link(href="#pk") Link
+              li.nav-item
+                a.nav-link(href="#pk") Link
+              li.nav-item.dropdown
+                a.nav-link.dropdown-toggle(
+                  href="#",
+                  data-bs-toggle="dropdown",
+                  aria-expanded="false"
+                ) Dropdown
+                ul.dropdown-menu
+                  li
+                    span.dropdown-header Dropdown header
+                  li
+                    a.dropdown-item(href="#pk") Action
+                  li
+                    a.dropdown-item(href="#pk") Another action
+                  li
+                    a.dropdown-item(href="#pk") Something else here
+                  li
+                    hr.dropdown-divider
+                  li
+                    a.dropdown-item(href="#pk") Separated link
+                  li
+                    hr.dropdown-divider
+                  li
+                    a.dropdown-item(href="#pk") Another separated link
+        .col-md-6
+          +navbar('exampleNavbar2', 'Icons').navbar-dark.bg-danger.rounded(
+            href="#"
           )
-            nav.navbar.navbar-expand-lg.bg-primary
-              .container
-                a.navbar-brand(href="#") Primary Color
-                button.navbar-toggler.navbar-toggler-right.burger-menu(
-                  type="button",
-                  data-toggle="collapse",
-                  data-target="#navbar-primary",
-                  aria-controls="navbarNav",
-                  aria-expanded="false",
-                  aria-label="Toggle navigation"
-                )
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                #navbar-primary.collapse.navbar-collapse
-                  ul.navbar-nav.ml-auto
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-compass(aria-hidden="true")
-                        | Discover
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-user-o(aria-hidden="true")
-                        | Profile
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-cog(aria-hidden="true")
-                        | Settings
-            nav.navbar.navbar-expand-lg.bg-info
-              .container
-                a.navbar-brand(href="#") Info Color
-                button.navbar-toggler.navbar-toggler-right(
-                  type="button",
-                  data-toggle="collapse",
-                  data-target="#navbar-info",
-                  aria-controls="navbarNav",
-                  aria-expanded="false",
-                  aria-label="Toggle navigation"
-                )
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                #navbar-info.collapse.navbar-collapse
-                  ul.navbar-nav.ml-auto
-                    li.nav-item
-                      a.nav-link(href="#") Discover
-                    li.nav-item
-                      a.nav-link(href="#") Profile
-                    li.nav-item
-                      a.nav-link(href="#") Settings
-            nav.navbar.navbar-expand-lg.bg-success
-              .container
-                a.navbar-brand(href="#") Success Color
-                button.navbar-toggler.navbar-toggler-right(
-                  type="button",
-                  data-toggle="collapse",
-                  data-target="#navbar-success",
-                  aria-controls="navbarNav",
-                  aria-expanded="true",
-                  aria-label="Toggle navigation"
-                )
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                #navbar-success.navbar-collapse.collapse.show
-                  ul.navbar-nav.ml-auto
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-compass(aria-hidden="true")
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-user-o(aria-hidden="true")
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-cog(aria-hidden="true")
-            nav.navbar.navbar-expand-lg.bg-warning
-              .container
-                a.navbar-brand(href="#") Warning Color
-                button.navbar-toggler.navbar-toggler-right(
-                  type="button",
-                  data-toggle="collapse",
-                  data-target="#navbar-warning",
-                  aria-controls="navbarNav",
-                  aria-expanded="false",
-                  aria-label="Toggle navigation"
-                )
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                #navbar-warning.collapse.navbar-collapse
-                  ul.navbar-nav.ml-auto
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-facebook-official(aria-hidden="true")
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-twitter(aria-hidden="true")
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-google-plus(aria-hidden="true")
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-instagram(aria-hidden="true")
-            nav.navbar.navbar-expand-lg.bg-danger
-              .container
-                a.navbar-brand(href="#") Danger Color
-                button.navbar-toggler.navbar-toggler-right(
-                  type="button",
-                  data-toggle="collapse",
-                  data-target="#navbar-danger",
-                  aria-controls="navbarNav",
-                  aria-expanded="true",
-                  aria-label="Toggle navigation"
-                )
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                #navbar-danger.navbar-collapse.collapse.show
-                  ul.navbar-nav.ml-auto
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-facebook-official(aria-hidden="true")
-                        | Share
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-twitter(aria-hidden="true")
-                        | Tweet
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-pinterest(aria-hidden="true")
-                        | Pin
-            nav.navbar.navbar-expand-lg.navbar-transparent.pt-0
-              .container
-                a.navbar-brand(href="#") Transparent
-                button.navbar-toggler.navbar-toggler-right(
-                  type="button",
-                  data-toggle="collapse",
-                  data-target="#navbar-transparent",
-                  aria-controls="navbarNav",
-                  aria-expanded="false",
-                  aria-label="Toggle navigation"
-                )
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                  span.navbar-toggler-bar
-                #navbar-transparent.collapse.navbar-collapse
-                  ul.navbar-nav.ml-auto
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-facebook-official(aria-hidden="true")
-                        | Facebook
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-twitter(aria-hidden="true")
-                        | Twitter
-                    li.nav-item
-                      a.nav-link(href="#")
-                        i.fa.fa-instagram(aria-hidden="true")
-                        | Instagram
-      .section
-        .container
-          .row
-            .col-md-6
-              .title
-                h3 Progress Bar
-                br
-              .progress
-                .progress-bar.progress-bar-success(
-                  role="progressbar",
-                  style="width: 25%",
-                  aria-valuenow="25",
-                  aria-valuemin="0",
-                  aria-valuemax="100"
-                )
-              br
-              .progress
-                .progress-bar.progress-bar-info(
-                  role="progressbar",
-                  style="width: 50%",
-                  aria-valuenow="50",
-                  aria-valuemin="0",
-                  aria-valuemax="100"
-                )
-              br
-              .progress
-                .progress-bar.progress-bar-danger(
-                  role="progressbar",
-                  style="width: 100%",
-                  aria-valuenow="100",
-                  aria-valuemin="0",
-                  aria-valuemax="100"
-                )
-              br
-              .progress
-                .progress-bar(
-                  role="progressbar",
-                  style="width: 15%",
-                  aria-valuenow="15",
-                  aria-valuemin="0",
-                  aria-valuemax="100"
-                )
-                .progress-bar.progress-bar-success(
-                  role="progressbar",
-                  style="width: 30%",
-                  aria-valuenow="30",
-                  aria-valuemin="0",
-                  aria-valuemax="100"
-                )
-                .progress-bar.progress-bar-warning(
-                  role="progressbar",
-                  style="width: 20%",
-                  aria-valuenow="20",
-                  aria-valuemin="0",
-                  aria-valuemax="100"
-                )
-            .col-md-6
-              .title
-                h3 Pagination
-                br
-              nav(aria-label="Page navigation example")
-                ul.pagination
-                  li.page-item
-                    a.page-link(href="#", aria-label="Previous")
-                      i.fa.fa-angle-left(aria-hidden="true")
-                      span.sr-only Previous
-                  li.page-item
-                    a.page-link(href="#") 1
-                  li.page-item
-                    a.page-link(href="#") 2
-                  li.page-item
-                    a.page-link(href="#") 3
-                  li.page-item
-                    a.page-link(href="#") 4
-                  li.page-item
-                    a.page-link(href="#") 5
-                  li.page-item
-                    a.page-link(href="#", aria-label="Next")
-                      i.fa.fa-angle-right(aria-hidden="true")
-                      span.sr-only Next
-              br
-              nav(aria-label="...")
-                ul.pagination
-                  li.page-item
-                    a.page-link(href="#", tabindex="-1") Previous
-                  li.page-item
-                    a.page-link(href="#") 1
-                  li.page-item
-                    a.page-link(href="#") 2
-                  li.page-item.active
-                    a.page-link(href="#")
-                      | 3
-                      span.sr-only (current)
-                  li.page-item
-                    a.page-link(href="#") 4
-                  li.page-item
-                    a.page-link(href="#") 5
-                  li.page-item
-                    a.page-link(href="#") Next
-          br
-          .row
-            .col-md-6
-              .title
-                h3 Navigation Tabs
-              .nav-tabs-navigation
-                .nav-tabs-wrapper
-                  ul#tabs.nav.nav-tabs(role="tablist")
-                    li.nav-item
-                      a.nav-link.active(
-                        data-toggle="tab",
-                        href="#home",
-                        role="tab"
-                      ) Home
-                    li.nav-item
-                      a.nav-link(
-                        data-toggle="tab",
-                        href="#profile",
-                        role="tab"
-                      ) Profile
-                    li.nav-item
-                      a.nav-link(
-                        data-toggle="tab",
-                        href="#messages",
-                        role="tab"
-                      ) Messages
-              #my-tab-content.tab-content.text-center
-                #home.tab-pane.active(role="tabpanel")
-                  p
-                    | Larger, yet dramatically thinner. More powerful, but
-                    | remarkably power efficient. With a smooth metal surface that
-                    | seamlessly meets the new Retina HD display.
-                #profile.tab-pane(role="tabpanel")
-                  p Here is your profile.
-                #messages.tab-pane(role="tabpanel")
-                  p Here are your messages.
-            .col-md-6
-              .title
-                h3 Labels
-              span.label.label-default Default
-              span.label.label-primary Primary
-              span.label.label-info Info
-              span.label.label-success Success
-              span.label.label-warning Warning
-              span.label.label-danger Danger
-      .container.tim-container
-        .title
-          h3 Notifications
-      #notifications
-        .alert.alert-info
-          .container
-            span This is a plain notification!
-        .alert.alert-success
-          .container
-            button.close(
-              type="button",
-              data-dismiss="alert",
-              aria-label="Close"
-            )
-              i.fa.fa-times
-            span This is a notification with close button.
-        .alert.alert-warning.alert-with-icon(data-notify="container")
-          .container
-            .alert-wrapper
-              button.close(
-                type="button",
-                data-dismiss="alert",
-                aria-label="Close"
+            li.nav-item.active
+              a.nav-link(href="#pk")
+                i.far.fa-envelope
+            li.nav-item
+              a.nav-link(href="#pk")
+                i.far.fa-user
+            li.nav-item.dropdown
+              a.nav-link.dropdown-toggle(
+                href="#",
+                data-bs-toggle="dropdown",
+                aria-expanded="false"
               )
-                i.fa.fa-times
-              .message
-                i.fa.fa-bell-o
-                | This is a notification with close
-                | button and icon.
-        .alert.alert-danger.alert-with-icon(data-notify="container")
-          .container
-            .alert-wrapper
-              button.close(
-                type="button",
-                data-dismiss="alert",
-                aria-label="Close"
-              )
-                i.fa.fa-times
-              .message
-                i.fa.fa-bell-o
-                | This is a notification with close
-                | button and icon and have many lines. You can see that the icon
-                | and the close button are always vertically aligned. This is a
-                | beautiful notification. So you don't have to worry about the
-                | style.
-      // end notifications
-      .container.tim-container
-        .title
-          h3 Typography
-        #typography
-          .row
-            .col-sm-3
-              p Header 1
-            .col-sm-9
-              h1 Thinking in textures
-          .row
-            .col-sm-3
-              p Header 2
-            .col-sm-9
-              h2 Thinking in textures
-          .row
-            .col-sm-3
-              p Header 3
-            .col-sm-9
-              h3 Thinking in textures
-          .row
-            .col-sm-3
-              p Header 4
-            .col-sm-9
-              h4 Thinking in textures
-          .row
-            .col-sm-3
-              p Header 5
-            .col-sm-9
-              h5 Thinking in textures
-          .row
-            .col-sm-3
-              p Header 6
-            .col-sm-9
-              h6 Thinking in textures
-          .row
-            .col-sm-3
-              p Paragraph
-            .col-sm-9
-              p Thinking in textures
-          .row
-            .col-sm-3
-              p Quote
-            .col-sm-9
-              blockquote.blockquote
-                p.mb-0
-                  | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
-                  | diam nonummy nibh euismod tincidunt ut laoreet dolore magna
-                  | aliquam erat volutpat. Ut wisi enim ad minim veniam.
-                br
-                footer.blockquote-footer
-                  | Someone famous in
-                  cite(title="source Title") Source Title
-          .row
-            .col-sm-3
-              p Muted text
-            .col-sm-9
-              p.text-muted
-                | Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
-          .row
-            .col-sm-3
-              p Primary text
-            .col-sm-9
-              p.text-primary
-                | Nullam id dolor id nibh ultricies vehicula ut id elit.
-          .row
-            .col-sm-3
-              p Success text
-            .col-sm-9
-              p.text-success
-                | Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          .row
-            .col-sm-3
-              p Info text
-            .col-sm-9
-              p.text-info
-                | Maecenas sed diam eget risus varius blandit sit amet non magna.
-          .row
-            .col-sm-3
-              p Warning text
-            .col-sm-9
-              p.text-warning
-                | Etiam porta sem malesuada magna mollis euismod.
-          .row
-            .col-sm-3
-              p Danger text
-            .col-sm-9
-              p.text-danger
-                | Donec ullamcorper nulla non metus auctor fringilla.
-          .row
-            .col-sm-3
-              p Small tag
-            .col-sm-9
-              h2
-                | Header with small subtitle
-                br
-                small ".small" is a tag for the headers
-        br
-        #images
-          .container
-            .title
-              h3 Images
-            .row
-              .col-sm-6.col-md-3
-                h4.images-title Rounded Image
-                img.img-rounded.img-responsive(
-                  src="../assets/img/uriel-soberanes.jpg",
-                  alt="Rounded Image"
-                )
-                .img-details
-                  .author
-                    img.img-circle.img-no-padding.img-responsive(
-                      src="../assets/img/faces/joe-gardner-2.jpg",
-                      alt="Circle Image"
-                    )
-                  p Sonia Green
-              .col-sm-3.col-md-2.mr-auto.ml-auto
-                h4.images-title Circle Image
-                img.img-circle.img-no-padding.img-responsive(
-                  src="../assets/img/faces/kaci-baum-2.jpg",
-                  alt="Rounded Image"
-                )
-                p.text-center Brigitte Bardot
-              .col-sm-3.col-md-2.mr-auto
-                h4.images-title Thumbnail
-                img.img-thumbnail.img-responsive(
-                  src="../assets/img/faces/erik-lucatero-2.jpg",
-                  alt="Rounded Image"
-                )
-                p.text-center John Keynes
-      .section.javascript-components
-        .container
-          .title
-            h2 Javascript Components
-          #modals.row
-            .col-md-6
-              .title
-                h3 Modal
-              // Button trigger modal
-              button.btn.btn-outline-danger.btn-round(
-                type="button",
-                data-toggle="modal",
-                data-target="#myModal"
-              )
-                | Launch demo modal
-              // Modal
-              #myModal.modal.fade(
-                tabindex="-1",
-                role="dialog",
-                aria-labelledby="exampleModalLabel",
-                aria-hidden="true"
-              )
-                .modal-dialog(role="document")
-                  .modal-content
-                    .modal-header
-                      button.close(
-                        type="button",
-                        data-dismiss="modal",
-                        aria-label="Close"
-                      )
-                        span(aria-hidden="true") ×
-                      h5#exampleModalLabel.modal-title.text-center
-                        | Modal title
-                    .modal-body
-                      | Far far away, behind the word mountains, far from the
-                      | countries Vokalia and Consonantia, there live the blind
-                      | texts. Separated they live in Bookmarksgrove right at the
-                      | coast of the Semantics, a large language ocean. A small
-                      | river named Duden flows by their place and supplies it
-                      | with the necessary regelialia. It is a paradisematic
-                      | country, in which roasted parts of sentences fly into your
-                      | mouth. Even the all-powerful Pointing has no control about
-                      | the blind texts it is an almost unorthographic life One
-                      | day however a small line of blind text by the name of
-                      | Lorem Ipsum decided to leave for the far World of Grammar.
-                    .modal-footer
-                      .left-side
-                        button.btn.btn-default.btn-link(
-                          type="button",
-                          data-dismiss="modal"
-                        )
-                          | Never mind
-                      .divider
-                      .right-side
-                        button.btn.btn-danger.btn-link(type="button")
-                          | Delete
-            .col-md-6
-              .title
-                h3 Popovers
-              button.btn.btn-round.btn-outline-danger(
-                type="button",
-                data-toggle="popover",
-                data-placement="top",
-                title="Popover on top",
-                data-content="Here will be some very useful information about this popover."
-              )
-                | On top
-              button.btn.btn-round.btn-outline-danger(
-                type="button",
-                data-toggle="popover",
-                data-placement="bottom",
-                title="Popover on bottom",
-                data-content="Here will be some very useful information about this popover."
-              )
-                | On bottom
-              button.btn.btn-round.btn-outline-danger(
-                type="button",
-                data-toggle="popover",
-                data-placement="left",
-                title="Popover on left",
-                data-content="Here will be some very useful information about this popover."
-              )
-                | On left
-              button.btn.btn-round.btn-outline-danger(
-                type="button",
-                data-toggle="popover",
-                data-placement="right",
-                title="Popover on right",
-                data-content="Here will be some very useful information about this popover."
-              )
-                | On right
-            br
-            .col-md-6
-              .title
-                h3 Datepicker
-              .row
-                .col-sm-6
-                  .form-group
-                    #datetimepicker.input-group.date
-                      input.form-control.datetimepicker(
-                        type="text",
-                        placeholder="27/03/2019"
-                      )
-                      .input-group-append
-                        span.input-group-text
-                          span.glyphicon.glyphicon-calendar
-                            i.fa.fa-calendar(aria-hidden="true")
-            .col-md-6
-              .title
-                h3 Tooltips
-              button.btn.btn-outline-danger.btn-round(
-                type="button",
-                data-toggle="tooltip",
-                data-placement="left",
-                title="On left"
-              )
-                | On left
-              button.btn.btn-outline-danger.btn-round(
-                type="button",
-                data-toggle="tooltip",
-                data-placement="right",
-                title="On right"
-              )
-                | On right
-              button.btn.btn-outline-danger.btn-round(
-                type="button",
-                data-toggle="tooltip",
-                data-placement="top",
-                title="On top"
-              )
-                | On top
-              button.btn.btn-outline-danger.btn-round(
-                type="button",
-                data-toggle="tooltip",
-                data-placement="bottom",
-                title="On bottom"
-              )
-                | On bottom
-          .title
-            h3 Carousel
-      #carousel.section.pt-o
-        .container
-          .row
-            .col-md-8.ml-auto.mr-auto
-              .card.page-carousel
-                #carouselExampleIndicators.carousel.slide(data-ride="carousel")
-                  ol.carousel-indicators
-                    li.active(
-                      data-target="#carouselExampleIndicators",
-                      data-slide-to="0"
-                    )
-                    li(
-                      data-target="#carouselExampleIndicators",
-                      data-slide-to="1"
-                    )
-                    li(
-                      data-target="#carouselExampleIndicators",
-                      data-slide-to="2"
-                    )
-                  .carousel-inner(role="listbox")
-                    .carousel-item.active
-                      img.d-block.img-fluid(
-                        src="../assets/img/soroush-karimi.jpg",
-                        alt="First slide"
-                      )
-                      .carousel-caption.d-none.d-md-block
-                        p Somewhere
-                    .carousel-item
-                      img.d-block.img-fluid(
-                        src="../assets/img/federico-beccari.jpg",
-                        alt="Second slide"
-                      )
-                      .carousel-caption.d-none.d-md-block
-                        p Somewhere else
-                    .carousel-item
-                      img.d-block.img-fluid(
-                        src="../assets/img/joshua-stannard.jpg",
-                        alt="Third slide"
-                      )
-                      .carousel-caption.d-none.d-md-block
-                        p Here it is
-                  a.left.carousel-control.carousel-control-prev(
-                    href="#carouselExampleIndicators",
-                    role="button",
-                    data-slide="prev"
-                  )
-                    span.fa.fa-angle-left
-                    span.sr-only Previous
-                  a.right.carousel-control.carousel-control-next(
-                    href="#carouselExampleIndicators",
-                    role="button",
-                    data-slide="next"
-                  )
-                    span.fa.fa-angle-right
-                    span.sr-only Next
-      .section.section-dark.section-fa-icons
-        .container
-          .row
-            .col-lg-6.col-md-12
-              h2.title Font Awesome 4 Icons
-              br
-              p.description
-                | Paper Kit comes with 100 custom icons made by our friends from
-                | NucleoApp. The official package contains over 2.100 thin icons
-                | which are looking great in combination with Paper Kit Make sure
-                | you check all of them and use those that you like the most.
-              br
-              a.btn.btn-danger.btn-round(href="#", target="_blank") View Demo Icons
-              a.btn.btn-outline-danger.btn-round(
-                href="https://fontawesome.com/v4/",
-                target="_blank"
-              ) View All Icons
-            .col-lg-6.col-md-12
-              .icons-container
-                i.fa.fa-clock-o
-                i.fa.fa-magic
-                i.fa.fa-camera-retro
-                i.fa.fa-compass
-                i.fa.fa-key
-                i.fa.fa-diamond
-                i.fa.fa-male
-                i.fa.fa-columns
-                i.fa.fa-id-badge
-                i.fa.fa-lightbulb-o
-                i.fa.fa-heart-o
-                i.fa.fa-globe
-                i.fa.fa-black-tie
-                i.fa.fa-search
-                i.fa.fa-cloud-download
-      .section.section-dark
-        .container
-          .row
-            .col-md-8.ml-auto.mr-auto.text-center
-              h2.title Completed with examples
-              p.description
-                | The kit comes with three pre-built pages to help you get started
-                | faster. You can change the text and images and you're good to
-                | go. More importantly, looking at them will give you a picture of
-                | what you can built with this powerful kit.
-      .section.section-image.section-login(
-        style="background-image: url('../assets/img/login-image.jpg')"
+                i.fas.fa-cog
+              ul.dropdown-menu.dropdown-menu-end
+                li
+                  span.dropdown-header Dropdown header
+                li
+                  a.dropdown-item(href="#pk") Another action
+                li
+                  a.dropdown-item(href="#pk") Something else here
+                li
+                  hr.dropdown-divider
+                li
+                  a.dropdown-item(href="#pk") Separated link
+
+    .container
+      h3 Navigation Areas
+
+    .mt-3.mb-5(style="background-image: url('../assets/img/ilya-yakover.jpg')")
+      +navbar('exampleNavbar3', 'Primary Color').navbar-dark.bg-primary(
+        href="#"
       )
+        li.nav-item
+          a.nav-link(href="#")
+            i.far.fa-compass
+            = " "
+            | Discover
+        li.nav-item
+          a.nav-link(href="#")
+            i.far.fa-user
+            = " "
+            | Profile
+        li.nav-item
+          a.nav-link(href="#")
+            i.fas.fa-cog
+            = " "
+            | Settings
+      +navbar('exampleNavbar4', 'Info Color').navbar-dark.bg-info(
+        href="#"
+      )
+        li.nav-item
+          a.nav-link(href="#") Discover
+        li.nav-item
+          a.nav-link(href="#") Profile
+        li.nav-item
+          a.nav-link(href="#") Settings
+      +navbar('exampleNavbar5', 'Success Color').navbar-dark.bg-success(
+        href="#"
+      )
+        li.nav-item
+          a.nav-link(href="#")
+            i.far.fa-compass
+        li.nav-item
+          a.nav-link(href="#")
+            i.far.fa-user
+        li.nav-item
+          a.nav-link(href="#")
+            i.fas.fa-cog
+      +navbar('exampleNavbar6', 'Warning Color').navbar-dark.bg-warning(
+        href="#"
+      )
+        li.nav-item
+          a.nav-link(href="#")
+            i.fab.fa-facebook-square
+        li.nav-item
+          a.nav-link(href="#")
+            i.fab.fa-twitter
+        li.nav-item
+          a.nav-link(href="#")
+            i.fab.fa-google-plus
+        li.nav-item
+          a.nav-link(href="#")
+            i.fab.fa-instagram
+      +navbar('exampleNavbar7', 'Danger Color').navbar-dark.bg-danger(
+        href="#"
+      )
+        li.nav-item
+          a.nav-link(href="#")
+            i.fab.fa-facebook-square
+            = " "
+            | Share
+        li.nav-item
+          a.nav-link(href="#")
+            i.fab.fa-twitter
+            = " "
+            | Tweet
+        li.nav-item
+          a.nav-link(href="#")
+            i.fab.fa-pinterest
+            = " "
+            | Pin
+      +navbar('exampleNavbar8', 'Transparent').navbar-dark.bg-transparent(
+        href="#"
+      )
+        li.nav-item
+          a.nav-link(href="#")
+            i.fab.fa-facebook-square
+            = " "
+            | Facebook
+        li.nav-item
+          a.nav-link(href="#")
+            i.fab.fa-twitter
+            = " "
+            | Twitter
+        li.nav-item
+          a.nav-link(href="#")
+            i.fab.fa-instagram
+            = " "
+            | Instagram
+
+    .container
+      .row
+        .col-md-6
+          h3 Progress Bar
+          .pt-3.pb-5
+            .progress
+              .progress-bar.bg-success(
+                role="progressbar",
+                style="width: 25%",
+                aria-valuenow="25",
+                aria-valuemin="0",
+                aria-valuemax="100"
+              )
+            br
+            .progress
+              .progress-bar.bg-info(
+                role="progressbar",
+                style="width: 50%",
+                aria-valuenow="50",
+                aria-valuemin="0",
+                aria-valuemax="100"
+              )
+            br
+            .progress
+              .progress-bar.bg-danger(
+                role="progressbar",
+                style="width: 100%",
+                aria-valuenow="100",
+                aria-valuemin="0",
+                aria-valuemax="100"
+              )
+            br
+            .progress
+              .progress-bar(
+                role="progressbar",
+                style="width: 15%",
+                aria-valuenow="15",
+                aria-valuemin="0",
+                aria-valuemax="100"
+              )
+              .progress-bar.bg-success(
+                role="progressbar",
+                style="width: 30%",
+                aria-valuenow="30",
+                aria-valuemin="0",
+                aria-valuemax="100"
+              )
+              .progress-bar.bg-warning(
+                role="progressbar",
+                style="width: 20%",
+                aria-valuenow="20",
+                aria-valuemin="0",
+                aria-valuemax="100"
+              )
+
+        .col-md-6
+          h3 Pagination
+          .pt-3.pb-5
+            nav(aria-label="Page navigation example")
+              ul.pagination
+                li.page-item
+                  a.page-link(href="#", aria-label="Previous")
+                    i.fa.fa-angle-left(aria-hidden="true")
+                    = " "
+                    span.sr-only Previous
+                li.page-item
+                  a.page-link(href="#") 1
+                li.page-item
+                  a.page-link(href="#") 2
+                li.page-item
+                  a.page-link(href="#") 3
+                li.page-item
+                  a.page-link(href="#") 4
+                li.page-item
+                  a.page-link(href="#") 5
+                li.page-item
+                  a.page-link(href="#", aria-label="Next")
+                    i.fa.fa-angle-right(aria-hidden="true")
+                    = " "
+                    span.sr-only Next
+            br
+            nav(aria-label="...")
+              ul.pagination
+                li.page-item
+                  a.page-link(href="#", tabindex="-1") Previous
+                li.page-item
+                  a.page-link(href="#") 1
+                li.page-item
+                  a.page-link(href="#") 2
+                li.page-item.active
+                  a.page-link(href="#")
+                    | 3
+                    span.sr-only (current)
+                li.page-item
+                  a.page-link(href="#") 4
+                li.page-item
+                  a.page-link(href="#") 5
+                li.page-item
+                  a.page-link(href="#") Next
+
+      .row
+        .col-md-6
+          h3 Navigation Tabs
+          .pt-3.pb-5
+            ul#myTab.nav.nav-tabs(role="tablist")
+              li.nav-item(role="presentation")
+                button#home-tab.nav-link.active(
+                  data-bs-toggle="tab",
+                  data-bs-target="#home-tab-pane",
+                  type="button",
+                  role="tab",
+                  aria-controls="home-tab-pane",
+                  aria-selected="true"
+                ) Home
+              li.nav-item(role="presentation")
+                button#profile-tab.nav-link(
+                  data-bs-toggle="tab",
+                  data-bs-target="#profile-tab-pane",
+                  type="button",
+                  role="tab",
+                  aria-controls="profile-tab-pane",
+                  aria-selected="false"
+                ) Profile
+              li.nav-item(role="presentation")
+                button#messages-tab.nav-link(
+                  data-bs-toggle="tab",
+                  data-bs-target="#messages-tab-pane",
+                  type="button",
+                  role="tab",
+                  aria-controls="messages-tab-pane",
+                  aria-selected="false"
+                ) Messages
+            #myTabContent.tab-content.text-center
+              #home-tab-pane.tab-pane.py-3.show.active(
+                role="tabpanel",
+                aria-labelledby="home-tab",
+                tabindex="0"
+              )
+                p
+                  | Larger, yet dramatically thinner. More powerful, but
+                  | remarkably power efficient. With a smooth metal surface that
+                  | seamlessly meets the new Retina HD display.
+              #profile-tab-pane.tab-pane.py-3(
+                role="tabpanel",
+                aria-labelledby="profile-tab",
+                tabindex="0"
+              ) 
+                p Here is your profile.
+              #messages-tab-pane.tab-pane.py-3(
+                role="tabpanel",
+                aria-labelledby="messages-tab",
+                tabindex="0"
+              )
+                p Here are your messages.
+
+        .col-md-6
+          h3 Labels
+          .pt-3.pb-5
+            span.badge.rounded-pill.bg-secondary Default
+            = " "
+            span.badge.rounded-pill.text-bg-primary Primary
+            = " "
+            span.badge.rounded-pill.text-bg-info Info
+            = " "
+            span.badge.rounded-pill.text-bg-success Success
+            = " "
+            span.badge.rounded-pill.text-bg-warning Warning
+            = " "
+            span.badge.rounded-pill.text-bg-danger Danger
+
+    .container
+      h3 Notifications
+
+    .mt-3.mb-5
+      .alert.alert-info(role="alert")
+        .container This is a plain notification!
+      .alert.alert-success.show(role="alert")
         .container
-          .row
-            .col-lg-4.col-md-6.mx-auto
-              .card.card-register
-                h3.title.mx-auto Welcome
-                .social-line.text-center
-                  a.btn.btn-neutral.btn-facebook.btn-just-icon.mt-0(
-                    href="#pablo"
-                  )
-                    i.fa.fa-facebook-square
-                  a.btn.btn-neutral.btn-google.btn-just-icon.mt-0(
-                    href="#pablo"
-                  )
-                    i.fa.fa-google-plus
-                  a.btn.btn-neutral.btn-twitter.btn-just-icon.mt-0(
-                    href="#pablo"
-                  )
-                    i.fa.fa-twitter
-                form.register-form
-                  label Email
-                  .input-group.form-group-no-border
-                    .input-group-prepend
-                      span.input-group-text
-                        i.fa.fa-envelope-o
-                    input.form-control(type="email", placeholder="Email")
-                  label Password
-                  .input-group.form-group-no-border
-                    .input-group-prepend
-                      span.input-group-text
-                        i.fa.fa-key
-                    input.form-control(type="password", placeholder="Password")
-                  button.btn.btn-danger.btn-block.btn-round
-                    | Register
-                .forgot
-                  a.btn.btn-link.btn-danger(href="#") Forgot password?
-              .col.text-center
-                a.btn.btn-outline-neutral.btn-round.btn-lg(
-                  href="register-page.pug",
-                  target="_blank"
-                ) View Register Page
-      .section.section-dark
+          | This is a notification with close button.
+          button.btn-close.float-end(
+            type="button",
+            data-bs-dismiss="alert",
+            aria-label="Close"
+          )
+      .alert.alert-warning.show(role="alert")
         .container
-          .row.example-page
-            .col-md-6.text-center
-              a(href="landing-page.pug", target="_blank")
-                img.img-rounded.img-responsive(
-                  src="../assets/img/examples/landing-page.png",
-                  alt="Rounded Image",
-                  style="width: 100%"
+          i.far.fa-bell
+          = " "
+          | This is a notification with close button and icon.
+          button.btn-close.float-end(
+            type="button",
+            data-bs-dismiss="alert",
+            aria-label="Close"
+          )
+      .alert.alert-danger.show(role="alert")
+        .container
+          i.far.fa-bell
+          = " "
+          | This is a notification with close button and icon and have many lines.
+          | You can see that the icon and the close button are always vertically aligned.
+          | This is a beautiful notification. So you don't have to worry about the style.
+          button.btn-close.float-end(
+            type="button",
+            data-bs-dismiss="alert",
+            aria-label="Close"
+          )
+
+  .container
+    h3 Typography
+    .row.py-3
+      .col-sm-3
+        p Header 1
+      .col-sm-9
+        h1 Thinking in textures
+    .row.py-3
+      .col-sm-3
+        p Header 2
+      .col-sm-9
+        h2 Thinking in textures
+    .row.py-3
+      .col-sm-3
+        p Header 3
+      .col-sm-9
+        h3 Thinking in textures
+    .row.py-3
+      .col-sm-3
+        p Header 4
+      .col-sm-9
+        h4 Thinking in textures
+    .row.py-3
+      .col-sm-3
+        p Header 5
+      .col-sm-9
+        h5 Thinking in textures
+    .row.py-3
+      .col-sm-3
+        p Header 6
+      .col-sm-9
+        h6 Thinking in textures
+    .row.py-3
+      .col-sm-3
+        p Paragraph
+      .col-sm-9
+        p Thinking in textures
+    .row.py-3
+      .col-sm-3
+        p Quote
+      .col-sm-9
+        figure.text-center.border-top.border-bottom
+          blockquote.blockquote
+            p
+              | Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+              | diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+              | aliquam erat volutpat. Ut wisi enim ad minim veniam.
+          figcaption.blockquote-footer.mt-1.mb-0
+            | Someone famous in
+            cite(title="source Title") Source Title
+    .row.py-3
+      .col-sm-3
+        p Muted text
+      .col-sm-9
+        p.text-muted
+          | Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.
+    .row.py-3
+      .col-sm-3
+        p Primary text
+      .col-sm-9
+        p.text-primary
+          | Nullam id dolor id nibh ultricies vehicula ut id elit.
+    .row.py-3
+      .col-sm-3
+        p Success text
+      .col-sm-9
+        p.text-success
+          | Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+    .row.py-3
+      .col-sm-3
+        p Info text
+      .col-sm-9
+        p.text-info
+          | Maecenas sed diam eget risus varius blandit sit amet non magna.
+    .row.py-3
+      .col-sm-3
+        p Warning text
+      .col-sm-9
+        p.text-warning
+          | Etiam porta sem malesuada magna mollis euismod.
+    .row.py-3
+      .col-sm-3
+        p Danger text
+      .col-sm-9
+        p.text-danger
+          | Donec ullamcorper nulla non metus auctor fringilla.
+    .row.pt-3.pb-5
+      .col-sm-3
+        p Small tag
+      .col-sm-9
+        h2
+          | Header with small subtitle
+          br
+          small ".small" is a tag for the headers
+
+    h3 Images
+    .row
+      .col-sm-6.col-md-3
+        h4 Rounded Image
+        .pt-3.pb-5
+          img.rounded.img-fluid(
+            src="../assets/img/uriel-soberanes.jpg",
+            alt="Rounded Image"
+          )
+          img.rounded-circle.img-fluid(
+            src="../assets/img/faces/joe-gardner-2.jpg",
+            alt="Circle Image"
+          )
+          p Sonia Green
+      .col-sm-3.col-md-2.mx-auto
+        h4 Circle Image
+        .pt-3.pb-5
+          img.rounded-circle.img-fluid(
+            src="../assets/img/faces/kaci-baum-2.jpg",
+            alt="Rounded Image"
+          )
+          p.text-center Brigitte Bardot
+      .col-sm-3.col-md-2
+        h4 Thumbnail
+        .pt-3.pb-5
+          img.img-thumbnail.rounded.img-fluid(
+            src="../assets/img/faces/erik-lucatero-2.jpg",
+            alt="Rounded Image"
+          )
+          p.text-center John Keynes
+
+  section
+    h2.container Javascript Components
+
+    .container
+      .row
+        .col-md-6
+          h3 Modal
+          .pt-3.pb-5
+            button.btn.btn-outline-danger.rounded-pill(
+              type="button",
+              data-bs-toggle="modal",
+              data-bs-target="#exampleModal"
+            ) Launch demo modal
+            #exampleModal.modal.fade(
+              tabindex="-1",
+              aria-labelledby="exampleModalLabel",
+              aria-hidden="true"
+            )
+              .modal-dialog
+                .modal-content
+                  .modal-header
+                    h5#exampleModalLabel.modal-title Modal title
+                    button.btn-close(
+                      type="button",
+                      data-bs-dismiss="modal",
+                      aria-label="Close"
+                    )
+                  .modal-body
+                    | Far far away, behind the word mountains, far from the
+                    | countries Vokalia and Consonantia, there live the blind
+                    | texts. Separated they live in Bookmarksgrove right at the
+                    | coast of the Semantics, a large language ocean. A small
+                    | river named Duden flows by their place and supplies it
+                    | with the necessary regelialia. It is a paradisematic
+                    | country, in which roasted parts of sentences fly into your
+                    | mouth. Even the all-powerful Pointing has no control about
+                    | the blind texts it is an almost unorthographic life One
+                    | day however a small line of blind text by the name of
+                    | Lorem Ipsum decided to leave for the far World of Grammar.
+                  .modal-footer
+                    button.btn.btn-default.btn-link(
+                      type="button",
+                      data-bs-dismiss="modal"
+                    ) Never mind
+                    button.btn.btn-danger.btn-link(type="button") Delete
+
+        .col-md-6
+          h3 Popovers
+          .pt-3.pb-5
+            a.btn.btn-outline-danger.rounded-pill(
+              tabindex="0",
+              data-bs-container="body",
+              data-bs-toggle="popover",
+              data-bs-trigger="focus",
+              data-bs-placement="top",
+              data-bs-content="Here will be some very useful information about this popover."
+            ) On top
+            = " "
+            a.btn.btn-outline-danger.rounded-pill(
+              tabindex="0",
+              data-bs-container="body",
+              data-bs-toggle="popover",
+              data-bs-trigger="focus",
+              data-bs-placement="right",
+              data-bs-content="Here will be some very useful information about this popover."
+            ) On right
+            = " "
+            a.btn.btn-outline-danger.rounded-pill(
+              tabindex="0",
+              data-bs-container="body",
+              data-bs-toggle="popover",
+              data-bs-trigger="focus",
+              data-bs-placement="bottom",
+              data-bs-content="Here will be some very useful information about this popover."
+            ) On bottom
+            = " "
+            a.btn.btn-outline-danger.rounded-pill(
+              tabindex="0",
+              data-bs-container="body",
+              data-bs-toggle="popover",
+              data-bs-trigger="focus",
+              data-bs-placement="left",
+              data-bs-content="Here will be some very useful information about this popover."
+            ) On left
+
+      .row
+        .col-md-6
+          h3 Datepicker
+          .pt-3.pb-5
+            p Not support
+
+        .col-md-6
+          h3 Tooltips
+          .pt-3.pb-5
+            button.btn.btn-outline-danger.rounded-pill(
+              type="button",
+              data-bs-toggle="tooltip",
+              data-bs-placement="top",
+              data-bs-title="On top"
+            ) On top
+            = " "
+            button.btn.btn-outline-danger.rounded-pill(
+              type="button",
+              data-bs-toggle="tooltip",
+              data-bs-placement="right",
+              data-bs-title="On right"
+            ) On right
+            = " "
+            button.btn.btn-outline-danger.rounded-pill(
+              type="button",
+              data-bs-toggle="tooltip",
+              data-bs-placement="bottom",
+              data-bs-title="On bottom"
+            ) On bottom
+            = " "
+            button.btn.btn-outline-danger.rounded-pill(
+              type="button",
+              data-bs-toggle="tooltip",
+              data-bs-placement="left",
+              data-bs-title="On left"
+            ) On left
+
+      h3 Carousel
+      .row.pt-3.pb-5
+        .col-md-8.mx-auto
+          #carouselExampleCaptions.carousel.slide(data-bs-ride="carousel")
+            .carousel-indicators
+              button.active(
+                type="button",
+                data-bs-target="#carouselExampleCaptions",
+                data-bs-slide-to="0",
+                aria-current="true",
+                aria-label="Slide 1"
+              )
+              button(
+                type="button",
+                data-bs-target="#carouselExampleCaptions",
+                data-bs-slide-to="1",
+                aria-label="Slide 2"
+              )
+              button(
+                type="button",
+                data-bs-target="#carouselExampleCaptions",
+                data-bs-slide-to="2",
+                aria-label="Slide 3"
+              )
+            .carousel-inner
+              .carousel-item.active
+                img.d-block.w-100.rounded(
+                  src="../assets/img/soroush-karimi.jpg",
+                  alt="First slide"
                 )
-              a.btn.btn-outline-neutral.btn-round(
-                href="landing-page.pug",
-                target="_blank"
-              ) Landing Page
-            .col-md-6.text-center
-              a(href="profile-page.pug", target="_blank")
-                img.img-rounded.img-responsive(
-                  src="../assets/img/examples/profile-page.png",
-                  alt="Rounded Image",
-                  style="width: 100%"
+                .carousel-caption.d-none.d-md-block
+                  p Somewhere
+              .carousel-item
+                img.d-block.w-100.rounded(
+                  src="../assets/img/federico-beccari.jpg",
+                  alt="Second slide"
                 )
-              a.btn.btn-outline-neutral.btn-round(
-                href="profile-page.pug",
-                target="_blank"
-              ) Profile Page
-      .section
-        .container.text-center
-          .row
-            .col-md-8.ml-auto.mr-auto.text-center
-              h2.title Do you like what you see?
-              p.description
-                | Cause if you do, it can be yours for Free. Hit the button below
-                | and download it. Start a new project or give an old Bootstrap 4
-                | project a new look.
-            .col-md-5.ml-auto.mr-auto.mt-4
-              a.btn.btn-danger.btn-round(
-                href="http://www.creative-tim.com/product/paper-kit-2"
-              ) Download free HTML
-          .row.text-center
-            .col-md-8.ml-auto.mr-auto
-              h2.title Want more?
-              p.description
-                | We've just launched
-                a.text-danger(
-                  href="http://demos.creative-tim.com/paper-kit-2-pro/presentation.html?ref=utp-pk2-demos",
-                  target="_blank"
-                ) Paper Kit 2 PRO
-                | . It has a huge number of components, sections and example
-                | pages.
-            .col-sm-5.ml-auto.mr-auto.mt-4
-              a.btn.btn-info.btn-round(
-                href="https://www.creative-tim.com/product/paper-kit-2-pro?ref=utp-pk-demos",
-                target="_blank"
-              )
-                i.fa.fa-rocket(aria-hidden="true")
-                | Upgrade to PRO
-          .row.justify-content-md-center.mt-5.text-center
-            .text-center.col-md-12.col-lg-8
-              h3 Thank you for supporting us!
-            .text-center.col-md-12.col-lg-8.mt-3
-              a.btn.btn-twitter-bg.twitter-sharrre.btn-round(
-                href="#pablo",
-                rel="tooltip",
-                title="Tweet!"
-              )
-                i.fa.fa-twitter
-                | Twitter
-              a.btn.btn-google-bg.linkedin-sharrre.btn-round(
-                href="#pablo",
-                rel="tooltip",
-                title="Share!"
-              )
-                i.fa.fa-google-plus
-                | Google
-              a.btn.btn-facebook-bg.facebook-sharrre.btn-round(
-                href="#pablo",
-                rel="tooltip",
-                title="Share!"
-              )
-                i.fa.fa-facebook-square
-                | Facebook
-              a.btn.btn-github-bg.btn-github.sharrre.btn-round(
-                href="https://github.com/creativetimofficial/paper-kit",
-                rel="tooltip",
-                title="Star on Github"
-              )
-                i.fa.fa-github
-                | Star
-    footer.footer.footer-black.footer-white
-      .container
-        .row
-          nav.footer-nav
-            ul
-              li
-                a(href="https://www.creative-tim.com", target="_blank") Creative Tim
-              li
-                a(href="http://blog.creative-tim.com/", target="_blank") Blog
-              li
-                a(href="https://www.creative-tim.com/license", target="_blank") Licenses
-          .credits.ml-auto
-            span.copyright
-              | ©
-              script.
-                document.write(new Date().getFullYear());
-              | , made with
-              i.fa.fa-heart.heart
-              | by Creative Tim
-    include _scripts
-    script.
-      $(function () {
-        $("#datetimepicker").datetimepicker({
-          icons: {
-            time: "fa fa-clock-o",
-            date: "fa fa-calendar",
-            up: "fa fa-chevron-up",
-            down: "fa fa-chevron-down",
-            previous: "fa fa-chevron-left",
-            next: "fa fa-chevron-right",
-            today: "fa fa-screenshot",
-            clear: "fa fa-trash",
-            close: "fa fa-remove",
-          },
-        });
-      });
+                .carousel-caption.d-none.d-md-block
+                  p Somewhere else
+              .carousel-item
+                img.d-block.w-100.rounded(
+                  src="../assets/img/joshua-stannard.jpg",
+                  alt="Third slide"
+                )
+                .carousel-caption.d-none.d-md-block
+                  p Somewhere else
+
+  section.bg-dark.text-bg-dark
+    .container
+      .row.py-5
+        .col-lg-6.col-md-12
+          h2 Font Awesome 4 Icons
+          p.py-3
+            | Paper Kit comes with 100 custom icons made by our friends from
+            | NucleoApp. The official package contains over 2.100 thin icons
+            | which are looking great in combination with Paper Kit Make sure
+            | you check all of them and use those that you like the most.
+          p
+            a.btn.btn-danger.rounded-pill(href="#", target="_blank") View Demo Icons
+            = " "
+            a.btn.btn-outline-danger.rounded-pill(
+              href="https://fontawesome.com/v4/",
+              target="_blank"
+            ) View All Icons
+        .col-lg-6.col-md-12
+          .demo-icons
+            i.far.fa-clock
+            i.fas.fa-atom
+            i.fas.fa-camera-retro
+            i.far.fa-compass
+            i.fas.fa-key
+            i.far.fa-gem
+            i.fas.fa-running
+            i.fas.fa-columns
+            i.far.fa-id-badge
+            i.far.fa-lightbulb
+            i.far.fa-heart
+            i.fas.fa-globe
+            i.fab.fa-black-tie
+            i.fas.fa-search
+            i.fas.fa-download
+      .row.py-5
+        .col-md-8.mx-auto.text-center
+          h2 Completed with examples
+          p.py-3
+            | The kit comes with three pre-built pages to help you get started
+            | faster. You can change the text and images and you're good to
+            | go. More importantly, looking at them will give you a picture of
+            | what you can built with this powerful kit.
+
+  section(style="background-image: url('../assets/img/login-image.jpg')")
+    .container
+      .row.py-5
+        .col-lg-4.col-md-6.mx-auto
+          include _register_form
+          .text-center.mt-5
+            a.btn.btn-outline-secondary.btn-lg.rounded-pill(
+              href="register-page.pug",
+              target="_blank"
+            ) View Register Page
+
+  section.bg-dark.text-bg-dark
+    .container
+      .row.py-5
+        .col-md-6.text-center
+          a(href="landing-page.pug", target="_blank")
+            img.rounded.img-fluid(
+              src="../assets/img/examples/landing-page.png",
+              alt="Rounded Image"
+            )
+          a.btn.btn-outline-neutral.rounded-pill(
+            href="landing-page.pug",
+            target="_blank"
+          ) Landing Page
+        .col-md-6.text-center
+          a(href="profile-page.pug", target="_blank")
+            img.rounded.img-fluid(
+              src="../assets/img/examples/profile-page.png",
+              alt="Rounded Image"
+            )
+          a.btn.btn-outline-neutral.rounded-pill(
+            href="profile-page.pug",
+            target="_blank"
+          ) Profile Page
+
+  section
+    .container
+      .row.py-5
+        .col-md-8.mx-auto.text-center
+          h2 Do you like what you see?
+          p
+            | Cause if you do, it can be yours for Free. Hit the button below
+            | and download it. Start a new project or give an old Bootstrap 4
+            | project a new look.
+          p
+            a.btn.btn-danger.rounded-pill(
+              href="http://www.creative-tim.com/product/paper-kit-2"
+            ) Download free HTML
+      .row.pb-5
+        .col-md-8.mx-auto.text-center
+          h2 Want more?
+          p
+            | We've just launched
+            = " "
+            a.text-danger(
+              href="http://demos.creative-tim.com/paper-kit-2-pro/presentation.html?ref=utp-pk2-demos",
+              target="_blank"
+            ) Paper Kit 2 PRO
+            | . It has a huge number of components, sections and example
+            | pages.
+          p
+            a.btn.btn-info.rounded-pill(
+              href="https://www.creative-tim.com/product/paper-kit-2-pro?ref=utp-pk-demos",
+              target="_blank"
+            )
+              i.fas.fa-rocket
+              = " "
+              | Upgrade to PRO
+      .row.pb-5
+        .col-md-12.mx-auto.text-center
+          h3 Thank you for supporting us!
+          p
+            a.btn.rounded-pill(href="#pablo")
+              i.fab.fa-twitter
+              = " "
+              | Twitter
+            = " "
+            a.btn.rounded-pill(href="#pablo")
+              i.fab.fa-google-plus-g
+              = " "
+              | Google
+            = " "
+            a.btn.rounded-pill(href="#pablo")
+              i.fab.fa-facebook-square
+              = " "
+              | Facebook
+            = " "
+            a.btn.rounded-pill(
+              href="https://github.com/creativetimofficial/paper-kit"
+            )
+              i.fab.fa-github
+              = " "
+              | Star

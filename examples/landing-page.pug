@@ -1,217 +1,169 @@
-doctype html
-//
-  =========================================================
-  Paper Kit 2 - v2.2.0
-  =========================================================
-  Product Page: https://www.creative-tim.com/product/paper-kit-2
-  Copyright 2019 Creative Tim (https://www.creative-tim.com)
-  Licensed under MIT (https://github.com/creativetimofficial/paper-kit-2/blob/master/LICENSE.md)
-  Coded by Creative Tim
-  =========================================================
-  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-html(lang="en")
-  head
-    meta(charset="utf-8")
-    title Paper Kit by Creative Tim
-    include _head
-  body.landing-page.sidebar-collapse
-    include _navbar
-    .page-header(
-      data-parallax="true",
-      style="background-image: url('../assets/img/daniel-olahh.jpg')"
-    )
-      .filter
-      .container
-        .motto.text-center
-          h1 Example page
-          h3 Start designing your landing page here.
-          br
-          a.btn.btn-outline-neutral.btn-round(
+extends _layout
+
+block main
+  section.bg-dark.text-bg-dark.py-3(
+    style="background-image: url('../assets/img/daniel-olahh.jpg')",
+    data-parallax="true"
+  )
+    .container.text-center
+      .py-5
+        h1 Example page
+        p.lead Start designing your landing page here.
+        p
+          a.btn.btn-outline-neutral.rounded-pill(
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           )
-            i.fa.fa-play
+            i.fas.fa-play
+            = " "
             | Watch video
-          button.btn.btn-outline-neutral.btn-round(type="button")
+          = " "
+          button.btn.btn-outline-neutral.rounded-pill(type="button")
             | Download
-    .main
-      .section.text-center
-        .container
-          .row
-            .col-md-8.ml-auto.mr-auto
-              h2.title Let's talk product
-              h5.description
-                | This is the paragraph where you can write more details about
-                | your product. Keep you user engaged by providing meaningful
-                | information. Remember that by this time, the user is curious,
-                | otherwise he wouldn't scroll to get here. Add a button if you
-                | want the user to see more.
-              br
-              a.btn.btn-danger.btn-round(href="#paper-kit") See Details
-          br
-          br
-          .row
-            .col-md-3
-              .info
-                .icon.icon-danger
-                  i.fa.fa-picture-o
-                .description
-                  h4.info-title Beautiful Gallery
-                  p.description
-                    | Spend your time generating new ideas. You don't have to
-                    | think of implementing.
-                  a.btn.btn-link.btn-danger(href="javascript:;") See more
-            .col-md-3
-              .info
-                .icon.icon-danger
-                  i.fa.fa-lightbulb-o
-                .description
-                  h4.info-title New Ideas
-                  p
-                    | Larger, yet dramatically thinner. More powerful, but
-                    | remarkably power efficient.
-                  a.btn.btn-link.btn-danger(href="javascript:;") See more
-            .col-md-3
-              .info
-                .icon.icon-danger
-                  i.fa.fa-bar-chart
-                .description
-                  h4.info-title Statistics
-                  p
-                    | Choose from a veriety of many colors resembling sugar paper
-                    | pastels.
-                  a.btn.btn-link.btn-danger(href="javascript:;") See more
-            .col-md-3
-              .info
-                .icon.icon-danger
-                  i.fa.fa-sun-o
-                .description
-                  h4.info-title Delightful design
-                  p
-                    | Find unique and handmade delightful designs related items
-                    | directly from our sellers.
-                  a.btn.btn-link.btn-danger(href="javascript:;") See more
-      .section.section-dark.text-center
-        .container
-          h2.title Let's talk about us
-          .row
-            .col-md-4
-              .card.card-profile.card-plain
-                .card-avatar
-                  a(href="#avatar")
-                    img(
-                      src="../assets/img/faces/clem-onojeghuo-3.jpg",
-                      alt="..."
-                    )
-                .card-body
-                  a(href="#paper-kit")
-                    .author
-                      h4.card-title Henry Ford
-                      h6.card-category Product Manager
-                  p.card-description.text-center
-                    | Teamwork is so important that it is virtually impossible for
-                    | you to reach the heights of your capabilities or make the
-                    | money that you want without becoming very good at it.
-                .card-footer.text-center
-                  a.btn.btn-link.btn-just-icon.btn-neutral(href="#pablo")
-                    i.fa.fa-twitter
-                  a.btn.btn-link.btn-just-icon.btn-neutral(href="#pablo")
-                    i.fa.fa-google-plus
-                  a.btn.btn-link.btn-just-icon.btn-neutral(href="#pablo")
-                    i.fa.fa-linkedin
-            .col-md-4
-              .card.card-profile.card-plain
-                .card-avatar
-                  a(href="#avatar")
-                    img(src="../assets/img/faces/joe-gardner-2.jpg", alt="...")
-                .card-body
-                  a(href="#paper-kit")
-                    .author
-                      h4.card-title Sophie West
-                      h6.card-category Designer
-                  p.card-description.text-center
-                    | A group becomes a team when each member is sure enough of
-                    | himself and his contribution to praise the skill of the
-                    | others. No one can whistle a symphony. It takes an orchestra
-                    | to play it.
-                .card-footer.text-center
-                  a.btn.btn-link.btn-just-icon.btn-neutral(href="#pablo")
-                    i.fa.fa-twitter
-                  a.btn.btn-link.btn-just-icon.btn-neutral(href="#pablo")
-                    i.fa.fa-google-plus
-                  a.btn.btn-link.btn-just-icon.btn-neutral(href="#pablo")
-                    i.fa.fa-linkedin
-            .col-md-4
-              .card.card-profile.card-plain
-                .card-avatar
-                  a(href="#avatar")
-                    img(
-                      src="../assets/img/faces/erik-lucatero-2.jpg",
-                      alt="..."
-                    )
-                .card-body
-                  a(href="#paper-kit")
-                    .author
-                      h4.card-title Robert Orben
-                      h6.card-category Developer
-                  p.card-description.text-center
-                    | The strength of the team is each individual member. The
-                    | strength of each member is the team. If you can laugh
-                    | together, you can work together, silence isn’t golden, it’s
-                    | deadly.
-                .card-footer.text-center
-                  a.btn.btn-link.btn-just-icon.btn-neutral(href="#pablo")
-                    i.fa.fa-twitter
-                  a.btn.btn-link.btn-just-icon.btn-neutral(href="#pablo")
-                    i.fa.fa-google-plus
-                  a.btn.btn-link.btn-just-icon.btn-neutral(href="#pablo")
-                    i.fa.fa-linkedin
-      .section.landing-section
-        .container
-          .row
-            .col-md-8.ml-auto.mr-auto
-              h2.text-center Keep in touch?
-              form.contact-form
-                .row
-                  .col-md-6
-                    label Name
-                    .input-group
-                      .input-group-prepend
-                        span.input-group-text
-                          i.fa.fa-user-o
-                      input.form-control(type="text", placeholder="Name")
-                  .col-md-6
-                    label Email
-                    .input-group
-                      .input-group-prepend
-                        span.input-group-text
-                          i.fa.fa-envelope-o
-                      input.form-control(type="text", placeholder="Email")
-                label Message
-                textarea.form-control(
-                  rows="4",
-                  placeholder="Tell us your thoughts and feelings..."
-                )
-                .row
-                  .col-md-4.ml-auto.mr-auto
-                    button.btn.btn-danger.btn-lg.btn-fill
-                      | Send Message
-    footer.footer.footer-white
-      .container
-        .row
-          nav.footer-nav
-            ul
-              li
-                a(href="https://www.creative-tim.com", target="_blank") Creative Tim
-              li
-                a(href="http://blog.creative-tim.com/", target="_blank") Blog
-              li
-                a(href="https://www.creative-tim.com/license", target="_blank") Licenses
-          .credits.ml-auto
-            span.copyright
-              | ©
-              script.
-                document.write(new Date().getFullYear());
-              | , made with
-              i.fa.fa-heart.heart
-              | by Creative Tim
-    include _scripts
+
+  section.py-5
+    .container
+      .row.pt-5.pb-3
+        .col-md-8.mx-auto.text-center
+          h2 Let's talk product
+          p
+            | This is the paragraph where you can write more details about
+            | your product. Keep you user engaged by providing meaningful
+            | information. Remember that by this time, the user is curious,
+            | otherwise he wouldn't scroll to get here. Add a button if you
+            | want the user to see more.
+          p
+            a.btn.btn-danger.rounded-pill(href="#paper-kit") See Details
+      .row.pb-5
+        .col-md-3.text-center
+          .h1
+            i.far.fa-image
+          h3 Beautiful Gallery
+          p
+            | Spend your time generating new ideas. You don't have to
+            | think of implementing.
+          p
+            a.text-danger(href="javascript:;") See more
+        .col-md-3.text-center
+          .h1
+            i.far.fa-lightbulb
+          h3 New Ideas
+          p
+            | Larger, yet dramatically thinner. More powerful, but
+            | remarkably power efficient.
+          p
+            a.text-danger(href="javascript:;") See more
+        .col-md-3.text-center
+          .h1
+            i.fas.fa-chart-bar
+          h3 Statistics
+          p
+            | Choose from a veriety of many colors resembling sugar paper
+            | pastels.
+          p
+            a.text-danger(href="javascript:;") See more
+        .col-md-3.text-center
+          .h1
+            i.far.fa-sun
+          h3 Delightful design
+          p
+            | Find unique and handmade delightful designs related items
+            | directly from our sellers.
+          p
+            a.text-danger(href="javascript:;") See more
+
+  section.bg-dark.text-bg-dark.py-5
+    .container
+      h2.text-center Let's talk about us
+      .row.pt-3
+        .col-md-4.text-center
+          a(href="#avatar")
+            img.rounded-circle(
+              src="../assets/img/faces/clem-onojeghuo-3.jpg",
+              alt="...",
+              width="120"
+            )
+          a(href="#paper-kit")
+            h4 Henry Ford
+            h6 Product Manager
+          p
+            | Teamwork is so important that it is virtually impossible for
+            | you to reach the heights of your capabilities or make the
+            | money that you want without becoming very good at it.
+          p
+            a.btn(href="#pablo")
+              i.fab.fa-twitter
+            a.btn(href="#pablo")
+              i.fab.fa-google-plus-g
+            a.btn(href="#pablo")
+              i.fab.fa-linkedin
+        .col-md-4.text-center
+          a(href="#avatar")
+            img.rounded-circle(
+              src="../assets/img/faces/joe-gardner-2.jpg",
+              alt="...",
+              width="120"
+            )
+          a(href="#paper-kit")
+            h4 Sophie West
+            h6 Designer
+          p
+            | A group becomes a team when each member is sure enough of
+            | himself and his contribution to praise the skill of the
+            | others. No one can whistle a symphony. It takes an orchestra
+            | to play it.
+          p
+            a.btn(href="#pablo")
+              i.fab.fa-twitter
+            a.btn(href="#pablo")
+              i.fab.fa-google-plus-g
+            a.btn(href="#pablo")
+              i.fab.fa-linkedin
+        .col-md-4.text-center
+          a(href="#avatar")
+            img.rounded-circle(
+              src="../assets/img/faces/erik-lucatero-2.jpg",
+              alt="...",
+              width="120"
+            )
+          a(href="#paper-kit")
+            h4 Robert Orben
+            h6 Developer
+          p
+            | The strength of the team is each individual member. The
+            | strength of each member is the team. If you can laugh
+            | together, you can work together, silence isn’t golden, it’s
+            | deadly.
+          p
+            a.btn(href="#pablo")
+              i.fab.fa-twitter
+            a.btn(href="#pablo")
+              i.fab.fa-google-plus-g
+            a.btn(href="#pablo")
+              i.fab.fa-linkedin
+
+  section.py-5
+    .container
+      .row
+        .col-md-8.mx-auto
+          h2.text-center Keep in touch?
+          form.row
+            .col-md-6.mb-3
+              label.form-label Name
+              .input-group
+                span.input-group-text
+                  i.far.fa-user
+                input.form-control(type="text", placeholder="Name")
+            .col-md-6.mb-3
+              label.form-label Email
+              .input-group
+                span.input-group-text
+                  i.far.fa-envelope
+                input.form-control(type="text", placeholder="Email")
+            .col-12.mb-3
+              label.form-label Message
+              textarea.form-control(
+                rows="4",
+                placeholder="Tell us your thoughts and feelings..."
+              )
+            .col-12.text-center
+              button.btn.btn-danger.btn-lg Send Message

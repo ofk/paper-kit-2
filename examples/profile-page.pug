@@ -1,127 +1,92 @@
-doctype html
-//
-  =========================================================
-  Paper Kit 2 - v2.2.0
-  =========================================================
-  Product Page: https://www.creative-tim.com/product/paper-kit-2
-  Copyright 2019 Creative Tim (https://www.creative-tim.com)
-  Licensed under MIT (https://github.com/creativetimofficial/paper-kit-2/blob/master/LICENSE.md)
-  Coded by Creative Tim
-  =========================================================
-  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-html(lang="en")
-  head
-    meta(charset="utf-8")
-    title Paper Kit by Creative Tim
-    include _head
-  body.profile-page.sidebar-collapse
-    include _navbar
-    .page-header.page-header-xs(
-      data-parallax="true",
-      style="background-image: url('../assets/img/fabio-mangione.jpg')"
-    )
-      .filter
-    .section.profile-content
-      .container
-        .owner
-          .avatar
-            img.img-circle.img-no-padding.img-responsive(
-              src="../assets/img/faces/joe-gardner-2.jpg",
+extends _layout
+
+block main
+  section.bg-dark.text-bg-dark(
+    style="background-image: url('../assets/img/fabio-mangione.jpg')",
+    data-parallax="true"
+  )
+
+  section
+    .row
+      .col-md-6.mx-auto.text-center
+        p
+          img.rounded-circle(
+            src="../assets/img/faces/joe-gardner-2.jpg",
+            alt="Circle Image",
+            width="150"
+          )
+        h4 Jane Faker
+        h6 Music Producer
+        p
+          | An artist of considerable range, Jane Faker — the name taken by
+          | Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
+          | and records all of his own music, giving it a warm, intimate feel
+          | with a solid groove structure.
+        btn.btn.btn-outline-default.rounded-pill
+          i.fa.fa-cog
+          = " "
+          | Settings
+
+  section.container
+    ul#myTab.nav.nav-tabs(role="tablist")
+      li.nav-item(role="presentation")
+        button#follows-tab.nav-link.active(
+          data-bs-toggle="tab",
+          data-bs-target="#follows-tab-pane",
+          type="button",
+          role="tab",
+          aria-controls="follows-tab-pane",
+          aria-selected="true"
+        ) Follows
+      li.nav-item(role="presentation")
+        button#following-tab.nav-link(
+          data-bs-toggle="tab",
+          data-bs-target="#following-tab-pane",
+          type="button",
+          role="tab",
+          aria-controls="following-tab-pane",
+          aria-selected="false"
+        ) Following
+    #myTabContent.tab-content.row
+      #follows-tab-pane.tab-pane.col-md-6.mx-auto.show.active(
+        role="tabpanel",
+        aria-labelledby="follows-tab",
+        tabindex="0"
+      )
+        .row.py-3.border-bottom
+          .col-lg-2.col-4
+            img.rounded-circle.img-fluid(
+              src="../assets/img/faces/clem-onojeghuo-2.jpg",
               alt="Circle Image"
             )
-          .name
-            h4.title
-              | Jane Faker
+          .col-lg-7.col-4
+            h6
+              | Flume
               br
-            h6.description Music Producer
-        .row
-          .col-md-6.ml-auto.mr-auto.text-center
-            p
-              | An artist of considerable range, Jane Faker — the name taken by
-              | Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-              | and records all of his own music, giving it a warm, intimate feel
-              | with a solid groove structure.
-            br
-            btn.btn.btn-outline-default.btn-round
-              i.fa.fa-cog
-              | Settings
-        br
-        .nav-tabs-navigation
-          .nav-tabs-wrapper
-            ul.nav.nav-tabs(role="tablist")
-              li.nav-item
-                a.nav-link.active(
-                  data-toggle="tab",
-                  href="#follows",
-                  role="tab"
-                ) Follows
-              li.nav-item
-                a.nav-link(data-toggle="tab", href="#following", role="tab") Following
-        // Tab panes
-        .tab-content.following
-          #follows.tab-pane.active(role="tabpanel")
-            .row
-              .col-md-6.ml-auto.mr-auto
-                ul.list-unstyled.follows
-                  li
-                    .row
-                      .col-lg-2.col-md-4.col-4.ml-auto.mr-auto
-                        img.img-circle.img-no-padding.img-responsive(
-                          src="../assets/img/faces/clem-onojeghuo-2.jpg",
-                          alt="Circle Image"
-                        )
-                      .col-lg-7.col-md-4.col-4.ml-auto.mr-auto
-                        h6
-                          | Flume
-                          br
-                          small Musical Producer
-                      .col-lg-3.col-md-4.col-4.ml-auto.mr-auto
-                        .form-check
-                          label.form-check-label
-                            input.form-check-input(
-                              type="checkbox",
-                              value="",
-                              checked=""
-                            )
-                            span.form-check-sign
-                  hr
-                  li
-                    .row
-                      .col-lg-2.col-md-4.col-4.mx-auto
-                        img.img-circle.img-no-padding.img-responsive(
-                          src="../assets/img/faces/ayo-ogunseinde-2.jpg",
-                          alt="Circle Image"
-                        )
-                      .col-lg-7.col-md-4.col-4
-                        h6
-                          | Banks
-                          br
-                          small Singer
-                      .col-lg-3.col-md-4.col-4
-                        .form-check
-                          label.form-check-label
-                            input.form-check-input(type="checkbox", value="")
-                            span.form-check-sign
-          #following.tab-pane.text-center(role="tabpanel")
-            h3.text-muted Not following anyone yet :(
-            button.btn.btn-warning.btn-round Find artists
-    footer.footer
-      .container
-        .row
-          nav.footer-nav
-            ul
-              li
-                a(href="https://www.creative-tim.com", target="_blank") Creative Tim
-              li
-                a(href="http://blog.creative-tim.com/", target="_blank") Blog
-              li
-                a(href="https://www.creative-tim.com/license", target="_blank") Licenses
-          .credits.ml-auto
-            span.copyright
-              | ©
-              script.
-                document.write(new Date().getFullYear());
-              | , made with
-              i.fa.fa-heart.heart
-              | by Creative Tim
-    include _scripts
+              small Musical Producer
+          .col-lg-3.col-4
+            .form-check
+              label.form-check-label
+                input.form-check-input(type="checkbox", value="", checked)
+        .row.py-3
+          .col-lg-2.col-md-4.col-4.mx-auto
+            img.rounded-circle.img-fluid(
+              src="../assets/img/faces/ayo-ogunseinde-2.jpg",
+              alt="Circle Image"
+            )
+          .col-lg-7.col-md-4.col-4
+            h6
+              | Banks
+              br
+              small Singer
+          .col-lg-3.col-md-4.col-4
+            .form-check
+              label.form-check-label
+                input.form-check-input(type="checkbox", value="")
+      #following-tab-pane.tab-pane.col-md-6.mx-auto(
+        role="tabpanel",
+        aria-labelledby="following-tab",
+        tabindex="0"
+      )
+        h3.text-muted Not following anyone yet :(
+        button.btn.btn-warning.rounded-pill Find artists

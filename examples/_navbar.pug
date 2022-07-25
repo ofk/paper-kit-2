@@ -1,14 +1,30 @@
-extends _navbar_base
+mixin navbar-raw(name, title)
+  nav.navbar.navbar-expand-lg(class!=attributes.class, aria-label="Navbar")
+    .container
+      a.navbar-brand(href!=attributes.href, target!=attributes.target)= title
+      button.navbar-toggler(
+        type="button",
+        data-bs-toggle="offcanvas",
+        data-bs-target="#" + name,
+        aria-controls=name
+      )
+        span.navbar-toggler-icon
+      .offcanvas.offcanvas-end(
+        id=name,
+        tabindex="-1",
+        aria-labelledby=name + "Label"
+      )
+        .offcanvas-header
+          .offcanvas-title(id=name + "Label")= title
+          button.btn-close.btn-close-white(
+            type="button",
+            data-bs-dismiss="offcanvas",
+            aria-label="Close"
+          )
+        .offcanvas-body
+          block
 
-block prepend navs
-  li.nav-item
-    a.nav-link(href="index.pug")
-      i.fa.fa-columns
-      | Components
-  li.nav-item
-    a.nav-link(
-      href="https://demos.creative-tim.com/paper-kit-2/docs/1.0/getting-started/introduction.html",
-      target="_blank"
-    )
-      i.fa.fa-book
-      | Documentation
+mixin navbar(name, title)
+  +navbar-raw(name, title)&attributes(attributes)
+    ul.navbar-nav.justify-content-end.flex-grow-1.pe-3
+      block

@@ -1,0 +1,158 @@
+doctype html
+//
+  =========================================================
+  Paper Kit 2 - v2.2.0
+  =========================================================
+  Product Page: https://www.creative-tim.com/product/paper-kit-2
+  Copyright 2019 Creative Tim (https://www.creative-tim.com)
+  Licensed under MIT (https://github.com/creativetimofficial/paper-kit-2/blob/master/LICENSE.md)
+  Coded by Creative Tim
+  =========================================================
+  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Paper Kit by Creative Tim
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(
+      rel="apple-touch-icon",
+      sizes="76x76",
+      href="../assets/img/apple-icon.png"
+    )
+    link(rel="icon", type="image/png", href="../assets/img/favicon.png")
+    // Fonts and icons
+    link(
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200",
+      rel="stylesheet"
+    )
+    link(
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css",
+      rel="stylesheet"
+    )
+    // CSS Files
+    link(
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css",
+      rel="stylesheet"
+    )
+    //- link(href="../assets/scss/paper-kit.scss", rel="stylesheet")
+    //- // CSS Just for demo purpose, don't include it in your project
+    //- link(href="../assets/demo/demo.css", rel="stylesheet")
+
+  body
+    block navbar-container
+      header
+        include _navbar
+        +navbar('offcanvasNavbar', 'Paper Kit 2').fixed-top.bg-light.shadow(
+          href="https://demos.creative-tim.com/paper-kit/index.html",
+          target="_blank"
+        )
+          block navbar-docs
+            li.nav-item
+              a.nav-link(href="index.pug")
+                i.fa.fa-columns
+                = " "
+                | Components
+            li.nav-item
+              a.nav-link(
+                href="https://demos.creative-tim.com/paper-kit-2/docs/1.0/getting-started/introduction.html",
+                target="_blank"
+              )
+                i.fa.fa-book
+                = " "
+                | Documentation
+          block navbar-shares
+            li.nav-item
+              a.nav-link(
+                href="https://twitter.com/CreativeTim",
+                target="_blank"
+              )
+                i.fab.fa-twitter
+                = " "
+                span.d-lg-none Twitter
+            li.nav-item
+              a.nav-link(
+                href="https://www.facebook.com/CreativeTim",
+                target="_blank"
+              )
+                i.fab.fa-facebook-square
+                = " "
+                span.d-lg-none Facebook
+            li.nav-item
+              a.nav-link(
+                href="https://www.instagram.com/CreativeTimOfficial",
+                target="_blank"
+              )
+                i.fab.fa-instagram
+                = " "
+                span.d-lg-none Instagram
+            li.nav-item
+              a.nav-link(
+                href="https://www.github.com/CreativeTimOfficial",
+                target="_blank"
+              )
+                i.fab.fa-github
+                = " "
+                span.d-lg-none GitHub
+
+    block main-container
+      main
+        block main
+
+    block footer-container
+      footer.container.d-flex.flex-wrap.justify-content-between.align-items-center.py-3
+        ul.nav.col-md-4
+          li.nav-item
+          a.nav-link(href="https://www.creative-tim.com", target="_blank") Creative Tim
+          li.nav-item
+          a.nav-link(href="http://blog.creative-tim.com/", target="_blank") Blog
+          li.nav-item
+          a.nav-link(
+            href="https://www.creative-tim.com/license",
+            target="_blank"
+          ) Licenses
+        .justify-content-end
+          | ©
+          script.
+            document.write(new Date().getFullYear());
+          | , made with
+          = " "
+          i.fas.fa-heart
+          = " "
+          | by Creative Tim
+
+    // Core JS Files
+    script(
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    )
+    script(
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    )
+    //- // Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/
+    //- script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
+    //- script(
+    //-   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.min.js"
+    //- )
+    //- // Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/
+    //- script(
+    //-   src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.1.0/nouislider.min.js"
+    //- )
+    //- // Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker
+    //- script(
+    //-   src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"
+    //- )
+    //- script(
+    //-   src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"
+    //- )
+    //- // Control Center for Paper Kit: parallax effects, scripts for the example pages etc
+    //- script(src="../assets/js/paper-kit.js")
+    //- // Google Maps Plugin
+    //- script(src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE")
+    script.
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+      var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
