@@ -1,0 +1,16 @@
+@use "sass:color";
+
+@each $color, $value in $theme-colors {
+  .text-bg-#{$color} {
+    color: $color-contrast-light !important;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  $light-value: color.adjust($value, $lightness: 7%);
+
+  .navbar.bg-#{$color} {
+    --bs-#{$color}: #{$light-value};
+    --bs-#{$color}-rgb: #{to-rgb($light-value)};
+  }
+}

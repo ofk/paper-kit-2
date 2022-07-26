@@ -1,0 +1,66 @@
+html {
+  font-size: var(--bs-root-font-size);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+%heading {
+  font-weight: var(--bs-body-font-weight);
+
+  small {
+    font-size: 60%;
+    font-weight: #{$font-weight-normal};
+    line-height: var(--bs-body-line-height);
+    color: $headings-small-color;
+  }
+}
+
+.h1,
+h1 {
+  @extend %heading;
+
+  font-size: 3.6rem;
+}
+
+.h2,
+h2 {
+  @extend %heading;
+
+  font-size: 2.8rem;
+}
+
+.h3,
+h3 {
+  @extend %heading;
+
+  font-size: 1.825rem;
+}
+
+.h4,
+h4 {
+  @extend %heading;
+
+  font-size: 1.6rem;
+}
+
+.h5,
+h5 {
+  @extend %heading;
+
+  font-size: 1.35rem;
+}
+
+.h6,
+h6 {
+  @extend %heading;
+
+  font-size: 0.9rem;
+}
+
+p {
+  font-size: $p-font-size;
+}
+
+a {
+  text-decoration: none;
+}

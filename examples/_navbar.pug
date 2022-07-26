@@ -1,5 +1,11 @@
 mixin navbar-raw(name, title)
-  nav.navbar.navbar-expand-lg(class!=attributes.class, aria-label="Navbar")
+  nav.navbar.navbar-expand-lg(
+    class!=attributes.class,
+    data-pk-scroll-boundary!=attributes.dataPkScrollBoundary,
+    data-pk-scroll-in-class!=attributes.dataPkScrollInClass,
+    data-pk-scroll-out-class!=attributes.dataPkScrollOutClass,
+    aria-label="Navbar"
+  )
     .container
       a.navbar-brand(href!=attributes.href, target!=attributes.target)= title
       button.navbar-toggler(

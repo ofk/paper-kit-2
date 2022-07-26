@@ -8,12 +8,7 @@
         "ignoreFontFamilies": ["nucleo-icons", "FontAwesome"]
       }
     ],
-    "function-no-unknown": [
-      true,
-      {
-        "ignoreFunctions": ["darken", "lighten"]
-      }
-    ],
+    "function-no-unknown": null,
     "block-no-empty": null,
     "no-descending-specificity": null,
     "no-duplicate-selectors": null,

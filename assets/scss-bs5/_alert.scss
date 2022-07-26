@@ -1,0 +1,21 @@
+@use "sass:color";
+
+.alert {
+  --bs-alert-padding-x: 15px;
+  --bs-alert-padding-y: 10px;
+  --bs-alert-border: none;
+  --bs-alert-border-radius: 0;
+}
+
+@each $state, $value in $theme-colors {
+  $light-value: color.adjust($value, $lightness: 7%);
+
+  .alert-#{$state} {
+    --bs-alert-color: #{$color-contrast-light};
+    --bs-alert-bg: #{$light-value};
+
+    .alert-link {
+      color: $color-contrast-light;
+    }
+  }
+}

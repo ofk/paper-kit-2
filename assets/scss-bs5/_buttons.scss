@@ -1,0 +1,55 @@
+@use "sass:map";
+
+.btn {
+  --bs-btn-font-size: #{$btn-font-size};
+  --bs-btn-font-weight: #{$font-weight-semibold};
+  --bs-btn-padding-x: 18px;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-line-height: 1.75;
+  --bs-btn-border-width: #{map.get($border-widths, 2)};
+
+  text-transform: uppercase;
+}
+
+@each $color, $value in $theme-colors {
+  @if $color != "light" and $color != "dark" {
+    .btn-#{$color} {
+      @include button-variant(
+        $value,
+        $value,
+        $color: $color-contrast-light,
+        $hover-color: $color-contrast-light,
+        $active-color: $color-contrast-light,
+        $disabled-color: $color-contrast-light
+      );
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  @if $color != "light" and $color != "dark" {
+    .btn-outline-#{$color} {
+      @include button-outline-variant(
+        $value,
+        $color-hover: $color-contrast-light,
+        $active-color: $color-contrast-light
+      );
+    }
+  }
+}
+
+.btn-link {
+  text-decoration: none;
+}
+
+.btn-lg {
+  --bs-btn-font-size: #{$btn-font-size-lg};
+  --bs-btn-padding-x: 30px;
+  --bs-btn-padding-y: 11px;
+}
+
+.btn-sm {
+  --bs-btn-font-size: #{$btn-font-size-sm};
+  --bs-btn-padding-x: 10px;
+  --bs-btn-padding-y: 4px;
+}

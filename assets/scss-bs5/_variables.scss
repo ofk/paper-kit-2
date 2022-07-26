@@ -1,0 +1,28 @@
+@use "sass:math";
+
+// Color system
+$primary: #51cbce;
+$secondary: #6c757d;
+$success: #6bd098;
+$info: #51bcda;
+$warning: #fbc658;
+$danger: #f5593d;
+
+$headings-small-color: #9a9a9a !default;
+
+// Body
+$body-color: #66615b;
+
+// Typography
+$font-family-sans-serif: "Montserrat", "Helvetica", arial, sans-serif;
+$font-size-root: 14px;
+
+$p-font-size: math.div(15px, $font-size-root) * 1rem !default;
+
+// Buttons
+$btn-font-size: math.div(12px, $font-size-root) * 1rem;
+$btn-font-size-lg: math.div(14px, $font-size-root) * 1rem;
+$btn-font-size-sm: $btn-font-size;
+
+// Forms
+$form-check-input-checked-bg-color: $info;

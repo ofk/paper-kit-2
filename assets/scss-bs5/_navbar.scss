@@ -1,0 +1,28 @@
+.navbar {
+  --bs-navbar-brand-padding-y: 18px;
+  --bs-navbar-brand-font-size: 1rem;
+  --bs-navbar-nav-link-padding-x: 1rem;
+
+  transition: all 0.4s;
+}
+
+.navbar-brand {
+  font-weight: $font-weight-semibold;
+  text-transform: uppercase;
+}
+
+.navbar-nav {
+  --bs-nav-link-font-weight: #{$font-weight-semibold};
+
+  .nav-link {
+    text-transform: uppercase;
+  }
+}
+
+.navbar-dark {
+  --bs-navbar-color: #{rgba($white, 0.8)};
+  --bs-navbar-hover-color: #{$white};
+  --bs-navbar-disabled-color: #{rgba($white, 0.5)};
+  --bs-navbar-brand-color: #{rgba($white, 0.9)};
+  --bs-navbar-brand-hover-color: #{$white};
+}
