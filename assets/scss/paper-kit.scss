@@ -15,46 +15,94 @@
 
  */
 
-@import "paper-kit/variables";
-@import "paper-kit/mixins";
+// Configuration
+@import "variables";
+/* stylelint-disable scss/at-import-no-partial-leading-underscore */
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/_maps";
+@import "~bootstrap/scss/_mixins";
+/* stylelint-enable scss/at-import-no-partial-leading-underscore */
 
-// Plugins CSS
-@import "paper-kit/plugins/plugin-bootstrap-switch";
-@import "paper-kit/plugins/plugin-nouislider";
-@import "paper-kit/plugins/plugin-datepicker";
+// Layout & components
+@import "root";
+@import "reboot";
+// @import "type";
+// @import "images";
+// @import "containers";
+// @import "grid";
+// @import "tables";
+@import "forms";
+@import "buttons";
+// @import "transitions";
+// @import "dropdown";
+// @import "button-group";
+// @import "nav";
+@import "navbar";
+// @import "card";
+// @import "accordion";
+// @import "breadcrumb";
+// @import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+// @import "list-group";
+// @import "close";
+// @import "toasts";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
+// @import "offcanvas";
+// @import "placeholders";
 
-// Core CSS
-@import "paper-kit/buttons";
-@import "paper-kit/inputs";
-@import "paper-kit/checkbox-radio";
-@import "paper-kit/progress-bars";
-@import "paper-kit/badges";
-@import "paper-kit/pagination";
-@import "paper-kit/typography";
-@import "paper-kit/misc";
-@import "paper-kit/labels";
+// // Helpers
+@import "helpers";
 
-// components
-@import "paper-kit/social-buttons";
-@import "paper-kit/tabs-navs";
-@import "paper-kit/navbars";
-@import "paper-kit/dropdown";
-@import "paper-kit/alerts";
-@import "paper-kit/images";
-@import "paper-kit/tooltips-and-popovers";
-@import "paper-kit/modal";
-@import "paper-kit/icons";
-@import "paper-kit/carousel";
-@import "paper-kit/footers";
+// // Utilities
+// @import "utilities/api";
 
-// Cards
-@import "paper-kit/cards";
-@import "paper-kit/cards/card-plain";
-@import "paper-kit/cards/card-register";
-@import "paper-kit/cards/card-profile";
+// @import "paper-kit/css-variables";
+// @import "paper-kit/mixins";
 
-// example pages and sections
-@import "paper-kit/examples";
-@import "paper-kit/sections";
+// // Plugins CSS
+// @import "paper-kit/plugins/plugin-bootstrap-switch";
+// @import "paper-kit/plugins/plugin-nouislider";
+// @import "paper-kit/plugins/plugin-datepicker";
 
-@import "paper-kit/responsive";
+// // Core CSS
+// @import "paper-kit/buttons";
+// @import "paper-kit/inputs";
+// @import "paper-kit/checkbox-radio";
+// @import "paper-kit/progress-bars";
+// @import "paper-kit/badges";
+// @import "paper-kit/pagination";
+// @import "paper-kit/typography";
+// @import "paper-kit/misc";
+// @import "paper-kit/labels";
+
+// // components
+// @import "paper-kit/social-buttons";
+// @import "paper-kit/tabs-navs";
+// @import "paper-kit/navbars";
+// @import "paper-kit/dropdown";
+// @import "paper-kit/alerts";
+// @import "paper-kit/images";
+// @import "paper-kit/tooltips-and-popovers";
+// @import "paper-kit/modal";
+// @import "paper-kit/icons";
+// @import "paper-kit/carousel";
+// @import "paper-kit/footers";
+
+// // Cards
+// @import "paper-kit/cards";
+// @import "paper-kit/cards/card-plain";
+// @import "paper-kit/cards/card-register";
+// @import "paper-kit/cards/card-profile";
+
+// // example pages and sections
+// @import "paper-kit/examples";
+// @import "paper-kit/sections";
+
+// @import "paper-kit/responsive";
