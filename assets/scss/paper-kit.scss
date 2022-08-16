@@ -18,10 +18,10 @@
 // Configuration
 @import "variables";
 /* stylelint-disable scss/at-import-no-partial-leading-underscore */
-@import "~bootstrap/scss/_functions";
-@import "~bootstrap/scss/_variables";
-@import "~bootstrap/scss/_maps";
-@import "~bootstrap/scss/_mixins";
+@import "../../node_modules/bootstrap/scss/_functions";
+@import "../../node_modules/bootstrap/scss/_variables";
+@import "../../node_modules/bootstrap/scss/_maps";
+@import "../../node_modules/bootstrap/scss/_mixins";
 /* stylelint-enable scss/at-import-no-partial-leading-underscore */
 
 // Layout & components

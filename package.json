@@ -6,6 +6,7 @@
   "author": "Creative Tim",
   "homepage": "http://creative-tim.com/product/paper-kit",
   "scripts": {
+    "build": "sass assets/scss/paper-kit.scss assets/css/paper-kit.css",
     "dev": "parcel serve 'examples/**/!(_)*.{html,pug}'",
     "fix": "run-s -c fix:*",
     "fix:prettier": "prettier --write .",
